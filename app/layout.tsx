@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: "Ecossistema de Educação & Inovação com IA",
   icons: {
     icon: "/FAV-Academia.png",
+    shortcut: "/FAV-Academia.png",
+    apple: "/FAV-Academia.png",
   },
 };
 
