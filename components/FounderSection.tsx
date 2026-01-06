@@ -118,11 +118,11 @@ export default function FounderSection() {
                     <video
                         ref={videoRef}
                         className={styles.video}
-                        src="/alan.mp4"
+                        src="/alan.mp4#t=0.001"
                         muted
                         playsInline
                         loop={false}
-                        preload="metadata"
+                        preload="auto"
                     />
                 </div>
 
