@@ -108,6 +108,12 @@ export default function FounderSection() {
                     className={styles.videoColumn}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    onClick={() => {
+                        if (videoRef.current) {
+                            videoRef.current.loop = true;
+                            videoRef.current.play();
+                        }
+                    }}
                 >
                     <video
                         ref={videoRef}
@@ -116,6 +122,7 @@ export default function FounderSection() {
                         muted
                         playsInline
                         loop={false}
+                        preload="metadata"
                     />
                 </div>
 
