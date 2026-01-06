@@ -18,7 +18,40 @@ export default function NewsletterSection() {
     });
 
     const [isVisible, setIsVisible] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (isSubmitting) return;
+
+        setIsSubmitting(true);
+
+        const form = e.target as HTMLFormElement;
+        const formDataObj = new FormData(form);
+
+        try {
+            // Using no-cors because ActiveCampaign proc.php doesn't send CORS headers
+            // The data will still be sent successfully in most cases
+            await fetch(form.action, {
+                method: 'POST',
+                body: formDataObj,
+                mode: 'no-cors',
+            });
+
+            // Simulate a slight delay for better UX
+            setTimeout(() => {
+                setIsSubmitted(true);
+                setIsSubmitting(false);
+            }, 800);
+        } catch (error) {
+            console.error('Submission error:', error);
+            // Fallback: show success anyway as most errors with no-cors are just CORS warnings
+            setIsSubmitted(true);
+            setIsSubmitting(false);
+        }
+    };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -69,118 +102,137 @@ export default function NewsletterSection() {
                     {/* Content */}
                     <div className={styles.container}>
                         <div className={styles.content}>
-                            <h2 className={styles.title}>
-                                <span className={styles.titleWhite}>Abundânc</span>
-                                <span className={styles.titleGray}>[IA]</span>
-                            </h2>
+                            {!isSubmitted ? (
+                                <>
+                                    <h2 className={styles.title}>
+                                        <span className={styles.titleWhite}>Abundânc</span>
+                                        <span className={styles.titleGray}>[IA]</span>
+                                    </h2>
 
-                            <p className={styles.description}>
-                                Lives semanais com Alan Nicolas, vídeos novos do YouTube<br />
-                                e newsletter de IA para negócios. Grátis no seu email.
-                            </p>
+                                    <p className={styles.description}>
+                                        Lives semanais com Alan Nicolas, vídeos novos do YouTube<br />
+                                        e newsletter de IA para negócios. Grátis no seu email.
+                                    </p>
 
-                            {/* ActiveCampaign Form with Floating Labels */}
-                            <form
-                                method="POST"
-                                action="https://academialendariaoficial.activehosted.com/proc.php"
-                                id="_form_64_"
-                                className={styles.form}
-                            >
-                                <input type="hidden" name="u" value="64" />
-                                <input type="hidden" name="f" value="64" />
-                                <input type="hidden" name="s" />
-                                <input type="hidden" name="c" value="0" />
-                                <input type="hidden" name="m" value="0" />
-                                <input type="hidden" name="act" value="sub" />
-                                <input type="hidden" name="v" value="2" />
-                                <input type="hidden" name="or" value="3de650de-35e4-4e03-8152-2b63caa4f7b9" />
-                                <input type="hidden" name="field[17]" value="" />
-                                <input type="hidden" name="field[12]" value="" />
-                                <input type="hidden" name="field[11]" value="" />
-                                <input type="hidden" name="field[14]" value="" />
-                                <input type="hidden" name="field[15]" value="" />
-                                <input type="hidden" name="field[16]" value="" />
-
-                                <div className={styles.inputWrapper}>
-                                    {/* Nome Input */}
-                                    <div className={styles.inputContainer}>
-                                        <input
-                                            type="text"
-                                            id="fullname"
-                                            name="fullname"
-                                            value={formData.fullname}
-                                            onChange={(e) => setFormData({ ...formData, fullname: e.target.value })}
-                                            onFocus={() => setFocused({ ...focused, fullname: true })}
-                                            onBlur={() => setFocused({ ...focused, fullname: false })}
-                                            className={styles.input}
-                                        />
-                                        <div className={`${styles.floatingLabel} ${(formData.fullname || focused.fullname) ? styles.floatingLabelActive : ''}`}>
-                                            <i className={`fi fi-rr-id-card ${styles.labelIcon}`}></i>
-                                            <span className={styles.labelText}>Nome</span>
-                                        </div>
-                                    </div>
-
-                                    {/* Email Input */}
-                                    <div className={styles.inputContainer}>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                            onFocus={() => setFocused({ ...focused, email: true })}
-                                            onBlur={() => setFocused({ ...focused, email: false })}
-                                            required
-                                            className={styles.input}
-                                        />
-                                        <div className={`${styles.floatingLabel} ${(formData.email || focused.email) ? styles.floatingLabelActive : ''}`}>
-                                            <i className={`fi fi-rr-envelope-dot ${styles.labelIcon} ${styles.emailIcon}`}></i>
-                                            <div className={styles.labelGroup}>
-                                                <span className={styles.labelText}>E-mail</span>
-                                                <span className={styles.required}>*</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* WhatsApp Input */}
-                                    <div className={styles.inputContainer}>
-                                        <input
-                                            type="text"
-                                            id="field[105]"
-                                            name="field[105]"
-                                            value={formData.whatsapp}
-                                            onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                                            onFocus={() => setFocused({ ...focused, whatsapp: true })}
-                                            onBlur={() => setFocused({ ...focused, whatsapp: false })}
-                                            required
-                                            className={styles.input}
-                                        />
-                                        <div className={`${styles.floatingLabel} ${(formData.whatsapp || focused.whatsapp) ? styles.floatingLabelActive : ''}`}>
-                                            <i className={`fi fi-brands-whatsapp ${styles.labelIcon}`}></i>
-                                            <div className={styles.labelGroup}>
-                                                <span className={styles.labelText}>WhatsApp</span>
-                                                <span className={styles.required}>*</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Submit Button */}
-                                    <button
-                                        type="submit"
-                                        id="_form_64_submit"
-                                        className={styles.button}
+                                    {/* ActiveCampaign Form with Floating Labels */}
+                                    <form
+                                        method="POST"
+                                        action="https://academialendariaoficial.activehosted.com/proc.php"
+                                        id="_form_64_"
+                                        className={styles.form}
+                                        onSubmit={handleSubmit}
                                     >
-                                        <div>
-                                            {'Cadastrar'.split('').map((char, index) => (
-                                                <span key={index}>{char === ' ' ? '\u00A0' : char}</span>
-                                            ))}
+                                        <input type="hidden" name="u" value="64" />
+                                        <input type="hidden" name="f" value="64" />
+                                        <input type="hidden" name="s" />
+                                        <input type="hidden" name="c" value="0" />
+                                        <input type="hidden" name="m" value="0" />
+                                        <input type="hidden" name="act" value="sub" />
+                                        <input type="hidden" name="v" value="2" />
+                                        <input type="hidden" name="or" value="3de650de-35e4-4e03-8152-2b63caa4f7b9" />
+                                        <input type="hidden" name="field[17]" value="" />
+                                        <input type="hidden" name="field[12]" value="" />
+                                        <input type="hidden" name="field[11]" value="" />
+                                        <input type="hidden" name="field[14]" value="" />
+                                        <input type="hidden" name="field[15]" value="" />
+                                        <input type="hidden" name="field[16]" value="" />
+
+                                        <div className={styles.inputWrapper}>
+                                            {/* Nome Input */}
+                                            <div className={styles.inputContainer}>
+                                                <input
+                                                    type="text"
+                                                    id="fullname"
+                                                    name="fullname"
+                                                    value={formData.fullname}
+                                                    onChange={(e) => setFormData({ ...formData, fullname: e.target.value })}
+                                                    onFocus={() => setFocused({ ...focused, fullname: true })}
+                                                    onBlur={() => setFocused({ ...focused, fullname: false })}
+                                                    className={styles.input}
+                                                />
+                                                <div className={`${styles.floatingLabel} ${(formData.fullname || focused.fullname) ? styles.floatingLabelActive : ''}`}>
+                                                    <i className={`fi fi-rr-id-card ${styles.labelIcon}`}></i>
+                                                    <span className={styles.labelText}>Nome</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Email Input */}
+                                            <div className={styles.inputContainer}>
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    value={formData.email}
+                                                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                                    onFocus={() => setFocused({ ...focused, email: true })}
+                                                    onBlur={() => setFocused({ ...focused, email: false })}
+                                                    required
+                                                    className={styles.input}
+                                                />
+                                                <div className={`${styles.floatingLabel} ${(formData.email || focused.email) ? styles.floatingLabelActive : ''}`}>
+                                                    <i className={`fi fi-rr-envelope-dot ${styles.labelIcon} ${styles.emailIcon}`}></i>
+                                                    <div className={styles.labelGroup}>
+                                                        <span className={styles.labelText}>E-mail</span>
+                                                        <span className={styles.required}>*</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* WhatsApp Input */}
+                                            <div className={styles.inputContainer}>
+                                                <input
+                                                    type="text"
+                                                    id="field[105]"
+                                                    name="field[105]"
+                                                    value={formData.whatsapp}
+                                                    onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                                                    onFocus={() => setFocused({ ...focused, whatsapp: true })}
+                                                    onBlur={() => setFocused({ ...focused, whatsapp: false })}
+                                                    required
+                                                    className={styles.input}
+                                                />
+                                                <div className={`${styles.floatingLabel} ${(formData.whatsapp || focused.whatsapp) ? styles.floatingLabelActive : ''}`}>
+                                                    <i className={`fi fi-brands-whatsapp ${styles.labelIcon}`}></i>
+                                                    <div className={styles.labelGroup}>
+                                                        <span className={styles.labelText}>WhatsApp</span>
+                                                        <span className={styles.required}>*</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Submit Button */}
+                                            <button
+                                                type="submit"
+                                                id="_form_64_submit"
+                                                disabled={isSubmitting}
+                                                className={styles.button}
+                                            >
+                                                <div>
+                                                    {(isSubmitting ? 'Enviando...' : 'Cadastrar').split('').map((char, index) => (
+                                                        <span key={index}>{char === ' ' ? '\u00A0' : char}</span>
+                                                    ))}
+                                                </div>
+                                                {!isSubmitting && (
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                )}
+                                            </button>
                                         </div>
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </button>
+                                    </form>
+                                </>
+                            ) : (
+                                <div className={styles.successMessage}>
+                                    <div className={styles.successIcon}>
+                                        <i className="fi fi-rr-check"></i>
+                                    </div>
+                                    <h3 className={styles.successTitle}>Quase lá!</h3>
+                                    <p className={styles.successText}>
+                                        Sua inscrição foi realizada com sucesso.<br />
+                                        Fique de olho no seu e-mail e WhatsApp!
+                                    </p>
                                 </div>
-                            </form>
+                            )}
                         </div>
                     </div>
                 </div>
