@@ -338,8 +338,10 @@
     }
 
     .videoColumn {
+        display: block;
         width: 100%;
         max-width: 100%;
+        aspect-ratio: 9 / 16;
     }
 
     .founderInfo {
