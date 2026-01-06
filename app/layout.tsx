@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Academia Lendária",
   description: "Ecossistema de Educação & Inovação com IA",
+  icons: {
+    icon: "/FAV-Academia.png",
+  },
 };
 
 export default function RootLayout({
