@@ -342,11 +342,17 @@
         width: 100%;
         max-width: 100%;
         aspect-ratio: 9 / 16;
+        order: 2;
     }
 
     .founderInfo {
         text-align: center;
         grid-column: span 1;
+        order: 1;
+    }
+
+    .descriptionColumn {
+        order: 3;
     }
 
     .descriptionText {
