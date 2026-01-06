@@ -21,36 +21,15 @@ export default function NewsletterSection() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
+    const iframeRef = useRef<HTMLIFrameElement>(null);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (isSubmitting) return;
-
+    const handleSubmit = () => {
         setIsSubmitting(true);
-
-        const form = e.target as HTMLFormElement;
-        const formDataObj = new FormData(form);
-
-        try {
-            // Using no-cors because ActiveCampaign proc.php doesn't send CORS headers
-            // The data will still be sent successfully in most cases
-            await fetch(form.action, {
-                method: 'POST',
-                body: formDataObj,
-                mode: 'no-cors',
-            });
-
-            // Simulate a slight delay for better UX
-            setTimeout(() => {
-                setIsSubmitted(true);
-                setIsSubmitting(false);
-            }, 800);
-        } catch (error) {
-            console.error('Submission error:', error);
-            // Fallback: show success anyway as most errors with no-cors are just CORS warnings
+        // We show the success message after a small delay to simulate processing
+        setTimeout(() => {
             setIsSubmitted(true);
             setIsSubmitting(false);
-        }
+        }, 1500);
     };
 
     useEffect(() => {
@@ -120,6 +99,7 @@ export default function NewsletterSection() {
                                         action="https://academialendariaoficial.activehosted.com/proc.php"
                                         id="_form_64_"
                                         className={styles.form}
+                                        target="formTarget"
                                         onSubmit={handleSubmit}
                                     >
                                         <input type="hidden" name="u" value="64" />
@@ -236,6 +216,13 @@ export default function NewsletterSection() {
                         </div>
                     </div>
                 </div>
+
+                {/* Hidden Iframe for form submission */}
+                <iframe
+                    name="formTarget"
+                    ref={iframeRef}
+                    style={{ display: 'none' }}
+                />
 
                 {/* ActiveCampaign Script */}
                 <script dangerouslySetInnerHTML={{
