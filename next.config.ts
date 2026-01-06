@@ -5,12 +5,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/2-cerebro-ia',
-        destination: 'https://lp.wp.academialendaria.ai/',
+        destination: 'https://lp.academialendaria.ai/',
         permanent: false,
       },
       {
         source: '/gestor',
-        destination: 'https://go.wp.academialendaria.ai/gestor/',
+        destination: 'https://go.academialendaria.ai/gestor/',
         permanent: false,
       },
       {
