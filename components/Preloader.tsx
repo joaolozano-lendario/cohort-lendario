@@ -1,10 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './Preloader.module.css';
 
 export default function Preloader() {
+    const pathname = usePathname();
     const [loading, setLoading] = useState(true);
+
+    // Disable preloader for /business page
+    const isDisabled = pathname === '/business' || pathname?.startsWith('/business/');
+
     const [isMounted, setIsMounted] = useState(false);
     const [animateContent, setAnimateContent] = useState(false);
 
@@ -42,7 +48,7 @@ export default function Preloader() {
         }
     }, []);
 
-    if (!isMounted) return null;
+    if (!isMounted || isDisabled) return null;
 
     return (
         <div className={`${styles.preloader} ${!loading ? styles.hidden : ''}`}>
