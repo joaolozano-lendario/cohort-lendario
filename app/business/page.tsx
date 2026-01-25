@@ -2,7 +2,6 @@
 
 import React from 'react';
 import BusinessHero from './components/BusinessHero';
-import BusinessFeatures from './components/BusinessFeatures';
 import BusinessProblem from './components/BusinessProblem';
 import BusinessForWho from './components/BusinessForWho';
 import BusinessIncludes from './components/BusinessIncludes';
@@ -11,7 +10,6 @@ import BusinessTeam from './components/BusinessTeam';
 import BusinessPricing from './components/BusinessPricing';
 import BusinessGuarantee from './components/BusinessGuarantee';
 import BusinessFAQ from './components/BusinessFAQ';
-import Footer from '../../components/Footer';
 
 import styles from './business.module.css';
 
@@ -27,7 +25,6 @@ export default function BusinessPage() {
             <BusinessPricing />
             <BusinessGuarantee />
             <BusinessFAQ />
-            <Footer />
         </main>
     );
 }

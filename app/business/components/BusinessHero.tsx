@@ -31,12 +31,7 @@ export default function BusinessHero() {
                         />
                     </div>
 
-                    <div className={styles.headerCenter}>
-                        <div className={styles.timerWrapper}>
-                            <span className={styles.timerPrefix}>Fim do Lote em:</span>
-                            <span className={styles.timerValues}> 02d 14h 22m 10s</span>
-                        </div>
-                    </div>
+
 
                     <div className={styles.headerRight}>
                         <button className={styles.headerCta} onClick={handleCTAClick}>

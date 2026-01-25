@@ -63,6 +63,7 @@ export default function BusinessProblem() {
                 </div>
 
                 <div className={styles.rightColumn}>
+                    <img src="/Alan-Lateral.png" alt="Alan Nicolas" className={styles.expertImage} />
                     <div className={styles.infoCard}>
                         <span className={styles.cardName}>Alan Nicolas</span>
                         <p className={styles.cardTitle}>

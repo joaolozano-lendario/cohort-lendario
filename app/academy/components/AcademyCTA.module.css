@@ -1,0 +1,123 @@
+.section {
+    padding: 100px 20px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.banner {
+    background: #ff3b3b;
+    padding: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 12px;
+    margin-bottom: 80px;
+    box-shadow: 0 4px 20px rgba(255, 59, 59, 0.3);
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.ctaItem {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctaItem h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.recommendation {
+    font-size: 12px;
+    font-weight: 800;
+    color: #FFD44A;
+    margin-bottom: 10px;
+}
+
+.button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.highlight {
+    background: #FFD44A;
+    color: #000;
+    border: none;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.highlight:hover {
+    background: #e6bf42;
+    color: #000;
+}
+
+@media (max-width: 1024px) {
+    .ctaGrid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+    }
+}

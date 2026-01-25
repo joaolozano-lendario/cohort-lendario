@@ -1,0 +1,66 @@
+.academyMain {
+    background-color: #000;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 80px;
+    /* Space for sticky bar on mobile */
+}
+
+.stickyBar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.stickyContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.stickyLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stickyPrice {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.stickyRec {
+    font-size: 10px;
+    font-weight: 800;
+    color: #FFD44A;
+}
+
+.stickyButton {
+    background: #FFD44A;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .stickyBar {
+        display: block;
+    }
+}
