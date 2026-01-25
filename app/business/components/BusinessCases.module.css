@@ -1,0 +1,130 @@
+.section {
+    padding: 64px 0;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+}
+
+.controlBtn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.controlBtn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.sliderWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 40px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.videoCard {
+    flex: 0 0 32%;
+    /* Cards smaller for more visibility */
+    min-width: 320px;
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s ease;
+}
+
+.videoCard:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.aspectRatio {
+    position: relative;
+    padding-top: 100%;
+    /* 1:1 Aspect Ratio */
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 48px 0;
+    }
+
+    .videoCard {
+        flex: 0 0 45%;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+
+    .controls {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .videoCard {
+        flex: 0 0 85%;
+        min-width: 280px;
+    }
+}
