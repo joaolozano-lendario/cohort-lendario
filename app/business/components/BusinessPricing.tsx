@@ -63,10 +63,10 @@ export default function BusinessPricing() {
                         <div className={styles.cardHeader}>
                             <h3 className={styles.planName}>Lendário<br />Business (Anual)</h3>
                             <div className={styles.price}>
-                                <span className={styles.currency}>R$</span>
-                                <span className={styles.amount}>9.888</span>
-                                <span className={styles.period}>/ano</span>
+                                <span className={styles.currency}>12x de R$</span>
+                                <span className={styles.amount}>963,37</span>
                             </div>
+                            <div className={styles.priceSub}>Ou R$ 9.888,00 / ano à vista</div>
                         </div>
 
                         <ul className={styles.featureList}>
