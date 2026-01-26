@@ -1,95 +1,121 @@
-.section {
-    padding: 64px 0;
+.sectionWrapper {
     background-color: #000;
-    color: #fff;
+    padding: 128px 0 0;
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.blurCircle {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: #0A84FF;
+    filter: blur(120px);
+    opacity: 0.3;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .container {
-    max-width: 900px;
     width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px;
     text-align: center;
+    position: relative;
+    background-image:
+        repeating-linear-gradient(to right,
+            #161616,
+            #161616 1px,
+            transparent 1px,
+            transparent 64px);
+    background-size: 1217px 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.content {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
+.card {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 24px;
     padding: 80px 40px;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
 }
 
-.seal {
-    width: 100px;
-    height: 100px;
-    background: #fff;
-    color: #000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 30px;
-    font-weight: 900;
+.badge,
+.title,
+.description,
+.footer {
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    color: #0A84FF;
+    /* Azul pro Business */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    display: block;
 }
 
 .title {
-    font-size: 48px;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 5vw, 40px);
     font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 32px;
+    line-height: 1.2;
 }
 
-.subtitle {
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 40px;
-}
-
-.text {
-    font-size: 22px;
+.description {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
     line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto 40px;
 }
 
-.highlight {
+.footer {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
     font-weight: 700;
     color: #fff;
-    font-size: 26px;
-    margin: 30px 0;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
 }
 
 @media (max-width: 1024px) {
-    .section {
-        padding: 48px 20px;
+    .sectionWrapper {
+        padding: 64px 0 0;
     }
-}
 
-@media (max-width: 768px) {
-    .section {
-        padding: 64px 20px;
+    .container {
+        background-image: none;
+        padding: 0 20px;
     }
 
     .title {
-        font-size: 32px;
+        font-size: 28px;
     }
 
-    .text {
-        font-size: 18px;
+    .description {
+        font-size: 16px;
     }
 
-    .highlight {
-        font-size: 20px;
-    }
-
-    .content {
-        padding: 60px 20px;
+    .card {
+        padding: 48px 24px;
     }
 }
