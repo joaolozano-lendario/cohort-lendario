@@ -1,0 +1,165 @@
+.section {
+    padding: 64px 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faqItem {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.open {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.answer {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Unified Pill Button Styles */
+.ctaWrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    background: #FFD44A;
+    padding: 4px 4px 4px 32px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaWrapper:hover {
+    transform: translateY(-4px);
+    background: #ffcc00;
+    box-shadow: 0 10px 30px rgba(255, 212, 74, 0.2);
+}
+
+.ctaButton {
+    background: transparent;
+    color: #504015;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+}
+
+.arrowButton {
+    width: 52px;
+    height: 52px;
+    background: #fff;
+    color: #504015;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaWrapper:hover .arrowButton {
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 48px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 32px 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .question {
+        font-size: 16px;
+    }
+
+    .ctaWrapper {
+        padding: 4px 4px 4px 24px;
+        gap: 12px;
+    }
+
+    .ctaButton {
+        font-size: 15px;
+    }
+
+    .arrowButton {
+        width: 44px;
+        height: 44px;
+    }
+}

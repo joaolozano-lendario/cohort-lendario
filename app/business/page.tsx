@@ -10,6 +10,7 @@ import BusinessTeam from './components/BusinessTeam';
 import BusinessPricing from './components/BusinessPricing';
 import BusinessGuarantee from './components/BusinessGuarantee';
 import BusinessFAQ from './components/BusinessFAQ';
+import LandingFooter from '../../components/LandingFooter';
 
 import styles from './business.module.css';
 
@@ -25,6 +26,7 @@ export default function BusinessPage() {
             <BusinessPricing />
             <BusinessGuarantee />
             <BusinessFAQ />
+            <LandingFooter />
         </main>
     );
 }
