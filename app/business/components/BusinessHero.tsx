@@ -4,11 +4,11 @@ import React from 'react';
 import styles from './BusinessHero.module.css';
 
 const features = [
-    { icon: 'fi-rr-rocket-lunch', title: 'Aceleração de IA', description: 'Metodologia exclusiva para implementar IA no seu fluxo.' },
-    { icon: 'fi-rr-briefcase', title: 'Business Mindset', description: 'Visão estratégica para escalar seu negócio técnico.' },
-    { icon: 'fi-rr-comment-alt', title: 'Mentorias Ao Vivo', description: 'Acompanhamento semanal com especialistas do mercado.' },
-    { icon: 'fi-rr-users', title: 'Networking Elite', description: 'Acesso a uma comunidade de alto nível.' },
-    { icon: 'fi-rr-shield-check', title: 'Garantia Real', description: 'Compromisso com o seu resultado prático.' }
+    { icon: 'fi-rr-chart-line-up', title: <>Método<br />Growth IA®</>, description: 'Posicionamento, Oferta, Canais & Escala' },
+    { icon: 'fi-rr-users', title: <>Mentorias<br />Ao Vivo</>, description: '2 Vezes na semana sobre Negócios & Marketing' },
+    { icon: 'fi-rr-document', title: 'Frameworks de Marketing', description: 'Cursos e Ferramentas para receita mensurável' },
+    { icon: 'fi-rr-megaphone', title: 'Playbooks de Vendas', description: 'Scripts prontos e análise automatizada' },
+    { icon: 'fi-rr-settings', title: 'Ferramentas de IA Internas', description: 'Gestão tributária, financeira e operacional' }
 ];
 
 export default function BusinessHero() {
@@ -25,8 +25,8 @@ export default function BusinessHero() {
                 <div className={styles.headerBar}>
                     <div className={styles.headerLeft}>
                         <img
-                            src="/LB-M.svg"
-                            alt="Academia Lendár[IA]"
+                            src="/C-Business-Color-Dark.svg"
+                            alt="Academia Lendár[IA] Business"
                             className={styles.headerLogo}
                         />
                     </div>
@@ -45,9 +45,7 @@ export default function BusinessHero() {
 
                         <div className={styles.titleContainer}>
                             <h1 className={styles.textBlock}>
-                                Você vê oportunidades que<br />
-                                ninguém mais vê. Mas não<br />
-                                sabe como cobrar por elas?
+                                Você vê oportunidades que ninguém mais vê. Mas não consegue monetizá-las.
                             </h1>
                         </div>
 

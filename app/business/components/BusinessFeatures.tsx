@@ -6,12 +6,12 @@ import styles from './BusinessFeatures.module.css';
 const features = [
     {
         icon: 'fi fi-rr-chart-line-up',
-        title: 'Método Growth IA®',
+        title: <>Método<br />Growth IA®</>,
         description: 'Posicionamento, Oferta, Canais & Escala'
     },
     {
         icon: 'fi fi-rr-users',
-        title: 'Mentorias Ao Vivo',
+        title: <>Mentorias<br />Ao Vivo</>,
         description: '2 Vezes na semana sobre Negócios & Marketing'
     },
     {

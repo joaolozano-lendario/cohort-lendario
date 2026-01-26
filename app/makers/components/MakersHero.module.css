@@ -420,7 +420,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 8px auto 24px auto;
-        padding: 8px 16px;
+        padding: 8px;
         background: rgba(255, 255, 255, 0.1) !important;
         -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
         backdrop-filter: blur(12px) saturate(180%) !important;
