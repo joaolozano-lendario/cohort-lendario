@@ -8,8 +8,8 @@ export default function Preloader() {
     const pathname = usePathname();
     const [loading, setLoading] = useState(true);
 
-    // Disable preloader for /business page
-    const isDisabled = pathname === '/business' || pathname?.startsWith('/business/');
+    // Preloader only runs on the homepage
+    const isDisabled = pathname !== '/';
 
     const [isMounted, setIsMounted] = useState(false);
     const [animateContent, setAnimateContent] = useState(false);
