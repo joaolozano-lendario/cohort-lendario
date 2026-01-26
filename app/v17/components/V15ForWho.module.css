@@ -1,0 +1,101 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+}
+
+.wrapper {
+    padding-bottom: 128px !important;
+}
+
+.card {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cardForWho {
+    background: linear-gradient(#142415, #161616) padding-box,
+        linear-gradient(to bottom, #30D158, #323232, #242424) border-box;
+    border: 1px solid transparent;
+}
+
+.cardNotForWho {
+    background: linear-gradient(#2C140F, #161616) padding-box,
+        linear-gradient(to bottom, #FF453A, #323232, #242424) border-box;
+    border: 1px solid transparent;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #fff;
+}
+
+.iconCheck {
+    color: #30D158;
+    font-size: 18px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 24px;
+}
+
+.iconCross {
+    color: #FF453A;
+    font-size: 18px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 24px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.listItem {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.listItem span {
+    flex: 1;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .card {
+        padding: 40px;
+    }
+
+    .title {
+        font-size: 24px;
+        text-align: center;
+        justify-content: center;
+    }
+}

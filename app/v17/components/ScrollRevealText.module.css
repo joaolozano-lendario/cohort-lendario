@@ -1,0 +1,57 @@
+.scrollRevealContainer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.revealParagraph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.revealParagraph:last-child {
+    margin-bottom: 0;
+}
+
+.wordWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.word {
+    display: inline-block;
+}
+
+.highlight {
+    color: #ffcc00;
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+
+.highlightLarger {
+    color: #ffcc00;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .revealParagraph {
+        font-size: 24px;
+        gap: 6px 8px;
+    }
+
+    .scrollRevealContainer {
+        padding: 60px 0;
+    }
+}

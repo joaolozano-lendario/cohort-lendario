@@ -1,0 +1,300 @@
+.section {
+    padding: 80px 0 64px 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    gap: 24px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+    max-width: 70%;
+    line-height: 1.3;
+}
+
+.controls {
+    display: flex;
+    gap: 4px;
+    background: #161616;
+    padding: 4px;
+    border-radius: 200px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 8px;
+}
+
+/* Sliding circle background */
+.controls::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: #ffcc00;
+    border-radius: 200px;
+    top: 4px;
+    left: 4px;
+    opacity: 0;
+    transition: left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Show circle on first button hover */
+.controls:has(.controlBtn:first-child:hover)::before {
+    left: 4px;
+    opacity: 1;
+}
+
+/* Move circle to second button on hover */
+.controls:has(.controlBtn:last-child:hover)::before {
+    left: 40px;
+    opacity: 1;
+}
+
+.controlBtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 200px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.controlBtn i {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.controlBtn:hover {
+    color: #000;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carouselInner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+}
+
+.track {
+    display: flex;
+    gap: 32px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    user-select: none;
+}
+
+.slide {
+    flex-shrink: 0;
+    /* Cálculo: (1280px - 48px padding - 64px gaps) / 3 = 389.33px */
+    width: calc((1280px - 48px - 64px) / 3);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #111111;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cardImage {
+    width: 100%;
+    aspect-ratio: 16/9;
+    padding: 8px 8px 0 8px;
+    box-sizing: border-box;
+}
+
+.imageInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cardContent {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cardTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.cardDescription {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 16px;
+}
+
+.authorImageWrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.authorImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.authorName {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.shadowLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.shadowRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(-90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 64px 0;
+    }
+
+    .container,
+    .carouselInner {
+        padding: 0 24px;
+        max-width: 100%;
+    }
+
+    .header {
+        margin-bottom: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .title {
+        font-size: 26px;
+        max-width: 100%;
+    }
+
+    .track {
+        gap: 24px;
+    }
+
+    .slide {
+        /* 1 card principal + peeks nas laterais */
+        width: calc(100vw - 200px);
+        max-width: 600px;
+    }
+
+    .shadowLeft,
+    .shadowRight {
+        width: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 48px 0;
+    }
+
+    .header {
+        margin-bottom: 24px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .track {
+        gap: 16px;
+    }
+
+    .slide {
+        /* 1 card no grid mobile */
+        width: calc(100vw - 48px);
+    }
+
+    .cardContent {
+        padding: 24px;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+    }
+
+    .cardDescription {
+        font-size: 14px;
+    }
+
+    .shadowLeft,
+    .shadowRight {
+        width: 48px;
+    }
+}

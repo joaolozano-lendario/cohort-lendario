@@ -1,0 +1,116 @@
+.sectionWrapper {
+    background-color: var(--background);
+    padding: 128px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.faqList {
+    display: flex;
+    gap: 64px;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faqItem {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.faqItem:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.question {
+    width: 100%;
+    padding: 24px 32px;
+    background: none;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.answer {
+    padding: 0 32px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.icon {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.active .icon {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .sectionWrapper {
+        padding: 32px 0;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .faqList {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .question {
+        padding: 20px 24px;
+        font-size: 16px;
+    }
+
+    .answer {
+        padding: 0 24px 20px;
+    }
+}
+
+/* Light Mode Overrides */
+:global(.light-mode) .faqItem {
+    background: #ffffff;
+    border-color: #e8e8e8;
+}
+
+:global(.light-mode) .icon {
+    color: #888;
+}
