@@ -33,14 +33,11 @@ export default function BusinessForWho() {
 
                 <div className={styles.grid}>
                     <div className={`${styles.card} ${styles.forYou}`}>
-                        <div className={styles.cardHeader}>
-                            <span className={styles.checkIcon}>✓</span>
-                            <h3 className={styles.cardTitle}>Esse programa é para você se:</h3>
-                        </div>
+                        <h3 className={styles.cardTitle}>Esse programa é para você se:</h3>
                         <ul className={styles.list}>
                             {forYou.map((item, index) => (
                                 <li key={index} className={styles.listItem}>
-                                    <span className={styles.bullet}>✓</span>
+                                    <i className={`fi fi-rr-octagon-check ${styles.icon} ${styles.iconCheck}`}></i>
                                     <span>{item}</span>
                                 </li>
                             ))}
@@ -48,14 +45,11 @@ export default function BusinessForWho() {
                     </div>
 
                     <div className={`${styles.card} ${styles.notForYou}`}>
-                        <div className={styles.cardHeader}>
-                            <span className={styles.xIcon}>✗</span>
-                            <h3 className={styles.cardTitle}>Esse programa NÃO é para você se:</h3>
-                        </div>
+                        <h3 className={styles.cardTitle}>Esse programa NÃO é para você se:</h3>
                         <ul className={styles.list}>
                             {notForYou.map((item, index) => (
                                 <li key={index} className={styles.listItem}>
-                                    <span className={styles.bulletRed}>✗</span>
+                                    <i className={`fi fi-rr-octagon-xmark ${styles.icon} ${styles.iconCross}`}></i>
                                     <span>{item}</span>
                                 </li>
                             ))}
@@ -79,3 +73,4 @@ export default function BusinessForWho() {
         </section>
     );
 }
+
