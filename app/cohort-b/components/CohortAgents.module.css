@@ -275,15 +275,61 @@
         padding: 60px 0;
     }
 
+    .header {
+        margin-bottom: 32px;
+    }
+
+    .agentCard {
+        border-radius: 12px;
+    }
+
     .agentHeader {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
+        padding: 16px;
+    }
+
+    .agentInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .agentName {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+
+    .agentTitle {
+        font-size: 14px;
     }
 
     .agentMeta {
         width: 100%;
         justify-content: space-between;
+    }
+
+    .agentEconomy {
+        font-size: 13px;
+    }
+
+    .expandIcon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .agentContent {
+        padding: 0 16px 16px 16px;
+    }
+
+    .agentDescription {
+        font-size: 13px;
+        margin: 16px 0;
+    }
+
+    .tasksTable {
+        border-radius: 8px;
     }
 
     .tasksHeader,
@@ -307,6 +353,14 @@
     .taskName {
         font-weight: 600;
         margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .taskManual,
+    .taskAios,
+    .taskSaving,
+    .taskFreq {
+        font-size: 12px;
     }
 
     .taskManual::before { content: 'Manual: '; font-weight: 500; color: rgba(255,255,255,0.3); }
@@ -314,13 +368,32 @@
     .taskSaving::before { content: 'Economia: '; font-weight: 500; color: rgba(255,255,255,0.3); }
     .taskFreq::before { content: 'Frequência: '; font-weight: 500; color: rgba(255,255,255,0.3); }
 
+    .whyWorks {
+        font-size: 12px;
+        padding: 12px;
+    }
+
     .totalBox {
         flex-direction: column;
         text-align: center;
-        padding: 24px;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .totalIcon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .totalIcon i {
+        font-size: 20px;
+    }
+
+    .totalLabel {
+        font-size: 13px;
     }
 
     .totalValue {
-        font-size: 28px;
+        font-size: 24px;
     }
 }

@@ -399,4 +399,25 @@
     .blurCircle {
         display: none;
     }
+
+    /* Cost Table Mobile */
+    .costTable {
+        gap: 8px;
+    }
+
+    .costRow {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 16px;
+        text-align: left;
+    }
+
+    .costValue {
+        font-size: 16px;
+    }
+
+    .costSource {
+        text-align: left;
+        min-width: auto;
+    }
 }

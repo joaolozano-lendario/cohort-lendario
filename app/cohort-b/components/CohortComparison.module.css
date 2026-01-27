@@ -226,20 +226,83 @@
         padding: 60px 0;
     }
 
+    .header {
+        margin-bottom: 32px;
+    }
+
     .tableWrapper {
         margin: 0 -24px;
         padding: 0 24px;
+        position: relative;
+    }
+
+    /* Scroll hint gradient */
+    .tableWrapper::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 40px;
+        background: linear-gradient(90deg, transparent, #050505);
+        pointer-events: none;
+        z-index: 1;
     }
 
     .table {
-        min-width: 600px;
+        min-width: 580px;
     }
 
-    .metricHeader,
-    .metricCell,
-    .totalLabel,
+    .metricHeader {
+        width: 140px;
+        padding: 16px 12px;
+        font-size: 12px;
+    }
+
+    .optionHeader {
+        padding: 16px 12px;
+    }
+
+    .optionTitle {
+        font-size: 14px;
+    }
+
+    .optionSubtitle {
+        font-size: 10px;
+    }
+
+    .metricCell {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .valueCell {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .totalLabel {
+        padding: 16px 12px;
+        font-size: 13px;
+    }
+
+    .totalValue {
+        padding: 16px 12px;
+        font-size: 14px;
+    }
+
     .savingsLabel {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .savingsEmpty,
+    .savingsValue {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .sources span {
+        font-size: 11px;
     }
 }
