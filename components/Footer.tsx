@@ -60,8 +60,7 @@ export default function Footer() {
 
                             <h4 className={`${styles.title} ${styles.marginTop}`}>Eventos</h4>
                             <ul className={styles.list}>
-                                <li><a href="#hackathon">Hackathon Lendário™</a></li>
-                                <li><a href="#experiencia">Experiência Lendár[IA]™</a></li>
+                                <li><a href="/vale-do-silicio">Imersão no Vale do Silício</a></li>
                             </ul>
                         </div>
 

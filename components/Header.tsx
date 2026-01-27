@@ -17,8 +17,7 @@ const menuData = {
     eventos: {
         title: 'Eventos',
         items: [
-            { name: 'Experiência Lendár[IA]', href: '#experiencia' },
-            { name: 'Hackathon Lendário', href: '#hackathon' },
+            { name: 'Imersão no Vale do Silício', href: '/vale-do-silicio' },
         ],
     },
     conteudos: {
