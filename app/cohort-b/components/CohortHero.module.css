@@ -263,6 +263,14 @@
     color: #0A84FF;
 }
 
+.agentTag {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: #0A84FF;
+    letter-spacing: 0.02em;
+}
+
 .featureContent {
     display: flex;
     flex-direction: column;

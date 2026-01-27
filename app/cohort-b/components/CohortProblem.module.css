@@ -1,0 +1,402 @@
+.section {
+    padding: 80px 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Blur Circle */
+.blurCircle {
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 69, 58, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.04em;
+}
+
+.titleHighlight {
+    color: #FFD44A;
+}
+
+/* Identification Block */
+.identificationBlock {
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 32px;
+}
+
+.identificationHeader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.identificationIcon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 120, 120, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.identificationIcon i {
+    font-size: 20px;
+    color: rgba(255, 120, 120, 0.8);
+}
+
+.identificationTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.painsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.painCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.painCard:hover {
+    background: rgba(255, 120, 120, 0.04);
+    border-color: rgba(255, 120, 120, 0.15);
+}
+
+.painCard:hover .painIcon {
+    background: rgba(255, 120, 120, 0.1);
+}
+
+.painCard:hover .painIcon i {
+    color: rgba(255, 120, 120, 0.8);
+}
+
+.painIcon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.painIcon i {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.painText {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.identificationNote {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin: 0;
+}
+
+.identificationNote strong {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Cost Table */
+.costTable {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 32px;
+}
+
+.costRow {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 24px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    align-items: center;
+}
+
+.costRow:hover {
+    background: rgba(255, 120, 120, 0.04);
+}
+
+.costItem {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.costValue {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFD44A;
+    text-align: right;
+}
+
+.costSource {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: right;
+    min-width: 100px;
+}
+
+/* Pain Bullets */
+.painBulletsSection {
+    margin-top: 8px;
+}
+
+.painBulletsIntro {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 16px 0;
+}
+
+.painBullets {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.painBullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+.painX {
+    color: #ff6b6b;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* Absolution Block */
+.absolution {
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.absolutionLeft {
+    text-align: left;
+}
+
+.absolutionTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.absolutionText {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.absolutionRight {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.forgivenessList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forgivenessList p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    padding-left: 16px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.absolutionHighlight {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin: 16px 0 0 0;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    border-left: 2px solid rgba(255, 212, 74, 0.5);
+}
+
+.absolutionSubtext {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.absolutionSubtext strong {
+    color: #fff;
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
+    .painsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blurCircle {
+        width: 350px;
+        height: 350px;
+        right: -15%;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .header {
+        margin-bottom: 32px;
+    }
+
+    .title br {
+        display: none;
+    }
+
+    .identificationBlock {
+        padding: 24px;
+    }
+
+    .identificationHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .identificationTitle {
+        font-size: 18px;
+    }
+
+    .painsGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .painCard {
+        flex-direction: row;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .absolution {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 32px 24px;
+    }
+
+    .absolutionLeft {
+        text-align: center;
+    }
+
+    .absolutionTitle {
+        font-size: 28px;
+    }
+
+    .absolutionText {
+        font-size: 16px;
+    }
+
+    .forgivenessList p {
+        font-size: 14px;
+    }
+
+    .absolutionHighlight {
+        font-size: 15px;
+        padding: 14px 18px;
+    }
+
+    .blurCircle {
+        display: none;
+    }
+}

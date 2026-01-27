@@ -1,0 +1,330 @@
+.section {
+    padding: 80px 0;
+    background: #000;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.firstBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 212, 74, 0.08);
+    border: 1px solid rgba(255, 212, 74, 0.2);
+    border-radius: 200px;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+}
+
+.firstBadge i {
+    font-size: 12px;
+    color: rgba(255, 212, 74, 0.9);
+}
+
+.firstBadge span {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 212, 74, 0.9);
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.03em;
+}
+
+.titleHighlight {
+    color: #FFD44A;
+}
+
+.titleLight {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Highlight Card */
+.highlightCard {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlightCard::before {
+    display: none;
+}
+
+.highlightQuoteIcon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.highlightQuoteIcon i {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.highlightQuote {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0 0 32px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.highlightAuthor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.highlightAvatar {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.highlightInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.highlightName {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.highlightRole {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Carousel Section */
+.carouselSection {
+    margin-bottom: 64px;
+}
+
+.carouselHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.carouselHeader span {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.carouselDots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.activeDot {
+    background: rgba(255, 255, 255, 0.8);
+    width: 24px;
+    border-radius: 4px;
+}
+
+.carouselGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.carouselCard {
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.carouselCard:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.carouselCard blockquote {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 12px 0;
+}
+
+.carouselCard cite {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: normal;
+}
+
+/* Stats Bar */
+.statsBar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 48px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.statNumber {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.statLabel {
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .carouselGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .statsBar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .title br {
+        display: none;
+    }
+
+    .highlightCard {
+        padding: 32px 24px;
+    }
+
+    .highlightQuote {
+        font-size: 24px;
+    }
+
+    .carouselHeader {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .carouselGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .statsBar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 32px 24px;
+    }
+
+    .statNumber {
+        font-size: 36px;
+    }
+
+    .statLabel {
+        font-size: 13px;
+    }
+
+    .statLabel br {
+        display: none;
+    }
+}

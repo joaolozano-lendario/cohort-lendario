@@ -1,0 +1,645 @@
+.section {
+    padding: 80px 0;
+    background: #000;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 24px 0;
+    letter-spacing: -0.04em;
+}
+
+.titleHighlight {
+    color: #FFD44A;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* MAIN DELIVERABLES */
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 64px;
+}
+
+.mainCard {
+    background: #161616;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    padding: 28px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mainCard:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: #1a1a1a;
+}
+
+.mainIcon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+}
+
+.mainIcon i {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.mainTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+.mainDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+/* BONUS SECTION */
+.bonusSection {
+    margin-bottom: 80px;
+}
+
+.bonusSectionTitle {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.bonusBadge {
+    display: inline-block;
+    background: rgba(52, 199, 89, 0.15);
+    border: 1px solid rgba(52, 199, 89, 0.3);
+    color: #34C759;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 200px;
+    letter-spacing: 0.05em;
+}
+
+.bonusGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.bonusCard {
+    background: rgba(52, 199, 89, 0.04);
+    border: 1px solid rgba(52, 199, 89, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.bonusIcon {
+    width: 40px;
+    height: 40px;
+    background: rgba(52, 199, 89, 0.12);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.bonusIcon i {
+    font-size: 18px;
+    color: #34C759;
+}
+
+.bonusTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 12px 0;
+}
+
+.bonusList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bonusList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bonusList li i {
+    color: #34C759;
+    font-size: 10px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+/* SCHEDULE */
+.scheduleSection {
+    background: rgba(10, 132, 255, 0.06);
+    border: 1px solid rgba(10, 132, 255, 0.15);
+    border-radius: 24px;
+    padding: 48px;
+    margin-bottom: 80px;
+}
+
+.scheduleTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.scheduleSubtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin: 0 0 32px 0;
+}
+
+.scheduleGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.scheduleItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.scheduleDate {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0A84FF;
+    min-width: 70px;
+}
+
+.scheduleEvent {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* PRICING */
+.pricingHeader {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.pricingTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 16px 0;
+}
+
+.pricingQuote {
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto 48px auto;
+    align-items: stretch;
+}
+
+.pricingCard {
+    position: relative;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 64px 28px 36px 28px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricingCard:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.pricingCard.highlight {
+    background: linear-gradient(180deg, #111111 0%, #0a0a0a 100%);
+    border: 2px solid #FFD44A;
+    box-shadow: 0 0 60px rgba(255, 212, 74, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.pricingCard.highlight:hover {
+    border-color: #ffcc00;
+    box-shadow: 0 0 80px rgba(255, 212, 74, 0.15), 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px);
+}
+
+.bestValueBadge {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFD44A;
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 200px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+}
+
+.cardHeader {
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.planName {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.tagExternal {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 200px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+}
+
+.currency {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.amount {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+}
+
+.amountHighlight {
+    font-family: 'Inter', sans-serif;
+    font-size: 56px;
+    font-weight: 900;
+    color: #FFD44A;
+    line-height: 1;
+}
+
+.priceLabel {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.priceTotal {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 8px;
+}
+
+.cardBody {
+    flex-grow: 1;
+    margin-bottom: 24px;
+}
+
+.cardDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+/* Card Bonuses inside pricing card - DASHED BORDER PATTERN */
+.cardBonuses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+}
+
+.cardBonusItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cardBonusItem i {
+    font-size: 14px;
+    color: #34C759;
+}
+
+.cta {
+    margin-top: auto;
+}
+
+.ctaWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #FFD44A;
+    padding: 4px 4px 4px 24px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.ctaWrapper:hover {
+    transform: translateY(-4px);
+    background: #ffcc00;
+    box-shadow: 0 12px 32px rgba(255, 212, 74, 0.25);
+}
+
+.ctaButton {
+    background: transparent;
+    color: #1a1a1a;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.arrowButton {
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaWrapper:hover .arrowButton {
+    transform: rotate(-45deg);
+}
+
+.ctaWrapperSecondary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 4px 4px 4px 24px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.ctaWrapperSecondary:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.ctaButtonSecondary {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.arrowButtonSecondary {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaWrapperSecondary:hover .arrowButtonSecondary {
+    transform: rotate(-45deg);
+}
+
+.urgencyBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: rgba(255, 69, 58, 0.08);
+    border: 1px solid rgba(255, 69, 58, 0.2);
+    border-radius: 16px;
+    padding: 20px 32px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.urgencyIcon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 69, 58, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF453A;
+    font-size: 20px;
+}
+
+.urgencyText {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.urgencyText strong {
+    color: #FF453A;
+}
+
+@media (max-width: 1024px) {
+    .mainGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bonusGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scheduleGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .mainGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 48px;
+    }
+
+    .bonusGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .scheduleSection {
+        padding: 32px 20px;
+        margin-bottom: 48px;
+    }
+
+    .scheduleGrid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .pricingGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .pricingCard {
+        padding: 56px 24px 32px 24px;
+    }
+
+    .planName {
+        font-size: 20px;
+    }
+
+    .amount {
+        font-size: 40px;
+    }
+
+    .amountHighlight {
+        font-size: 48px;
+    }
+
+    .ctaButton,
+    .ctaButtonSecondary {
+        font-size: 14px;
+    }
+
+    .arrowButton,
+    .arrowButtonSecondary {
+        width: 40px;
+        height: 40px;
+    }
+
+    .urgencyBar {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}

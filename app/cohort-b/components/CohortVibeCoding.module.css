@@ -1,0 +1,153 @@
+.section {
+    padding: 80px 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.card {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 64px 48px;
+    text-align: center;
+}
+
+.label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(10, 132, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.03em;
+}
+
+.titleLight {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.subtitle {
+    font-size: clamp(17px, 2.5vw, 20px);
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 48px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    margin-bottom: 48px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.statDivider {
+    width: 1px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.statNumber {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.statLabel {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.4;
+}
+
+.closing {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.closingLight {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .section {
+        padding: 64px 20px;
+    }
+
+    .card {
+        padding: 60px 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 48px 16px;
+    }
+
+    .card {
+        padding: 48px 24px;
+        border-radius: 28px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .statDivider {
+        width: 60px;
+        height: 1px;
+    }
+
+    .statNumber {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        margin-bottom: 48px;
+    }
+
+    .closing {
+        font-size: 20px;
+    }
+
+    .closingLight {
+        font-size: 15px;
+    }
+}

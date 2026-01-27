@@ -1,0 +1,741 @@
+.section {
+    padding: 80px 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Blur Circles */
+.blurCircleBlue {
+    position: absolute;
+    top: 30%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(10, 132, 255, 0.2) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.blurCircleGold {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 212, 74, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 212, 74, 0.8);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.03em;
+}
+
+.highlight {
+    font-weight: 700;
+    color: #FFD44A;
+}
+
+.subtitle {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.quoteMinimal {
+    margin: 0 auto 40px auto;
+    max-width: 520px;
+    text-align: center;
+}
+
+.quoteMinimal p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 8px 0;
+}
+
+.quoteMinimal cite {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 212, 74, 0.7);
+    font-style: normal;
+}
+
+.comparisonSection {
+    margin-bottom: 80px;
+}
+
+.comparisonTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.comparisonGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.comparisonRow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.beforeCard {
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.beforeCard:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.afterCard {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.afterCard:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.beforeLabel,
+.afterLabel {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.beforeLabel {
+    color: rgba(255, 100, 100, 0.7);
+}
+
+.afterLabel {
+    color: rgba(100, 200, 130, 0.8);
+}
+
+.beforeCard p,
+.afterCard p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+}
+
+.powersSection {
+    margin-bottom: 80px;
+}
+
+.powersTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.powersSubtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.powersGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.powerCard {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.powerCard:hover {
+    border-color: rgba(10, 132, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.powerIcon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+    transition: all 0.3s ease;
+}
+
+.powerCard:hover .powerIcon {
+    background: rgba(10, 132, 255, 0.12);
+}
+
+.powerIcon i {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.powerCard:hover .powerIcon i {
+    color: rgba(10, 132, 255, 0.9);
+}
+
+.powerTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.powerDescription {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.fomoBar {
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 80px;
+}
+
+.fomoContent {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.fomoQuotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.fomoQuote {
+    text-align: center;
+}
+
+.fomoQuote span {
+    display: block;
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+}
+
+.fomoQuote cite {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: normal;
+}
+
+.metaphorBlock {
+    background: linear-gradient(135deg, rgba(255, 212, 74, 0.1) 0%, rgba(255, 212, 74, 0.02) 100%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 212, 74, 0.2);
+    border-radius: 24px;
+    padding: 64px;
+    text-align: center;
+}
+
+.metaphorIcon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 212, 74, 0.15);
+    border: 1px solid rgba(255, 212, 74, 0.25);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+}
+
+.metaphorIcon i {
+    font-size: 36px;
+    color: #FFD44A;
+}
+
+.metaphorTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 16px 0;
+}
+
+.metaphorText {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    color: #FFD44A;
+    margin: 0 0 12px 0;
+}
+
+.metaphorSubtext {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 32px 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.metaphorFeatures {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.metaphorFeature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    padding: 12px 24px;
+    border-radius: 200px;
+}
+
+.metaphorFeature i {
+    font-size: 14px;
+    color: #34C759;
+}
+
+.metaphorFeature span {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Power to Create Section */
+.powerToCreateSection {
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.08) 0%, rgba(10, 132, 255, 0.06) 100%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(10, 132, 255, 0.15);
+    border-radius: 24px;
+    padding: 64px;
+    margin-top: 64px;
+    text-align: center;
+}
+
+.powerToCreateHeader {
+    margin-bottom: 48px;
+}
+
+.powerBadge {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.2) 0%, rgba(10, 132, 255, 0.2) 100%);
+    border: 1px solid rgba(10, 132, 255, 0.3);
+    border-radius: 200px;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #0A84FF;
+    margin-bottom: 20px;
+}
+
+.powerToCreateTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.03em;
+}
+
+.powerStats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.powerStat {
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.powerStat:hover {
+    border-color: rgba(10, 132, 255, 0.3);
+    transform: translateY(-4px);
+}
+
+.powerStatNumber {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0A84FF 0%, #0A84FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.powerStatLabel {
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.karpathyQuote {
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-left: 3px solid #0A84FF;
+    border-radius: 0 16px 16px 0;
+    padding: 28px 32px;
+    margin: 0 0 32px 0;
+    text-align: left;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.karpathyQuote cite {
+    display: block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    color: #0A84FF;
+}
+
+.powerToCreateText {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.powerToCreateText strong {
+    color: #fff;
+}
+
+/* Built by Agents Section */
+.builtByAgents {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(135deg, rgba(52, 199, 89, 0.08) 0%, rgba(52, 199, 89, 0.03) 100%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(52, 199, 89, 0.2);
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin-top: 48px;
+}
+
+.builtByAgentsIcon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    background: rgba(52, 199, 89, 0.15);
+    border: 1px solid rgba(52, 199, 89, 0.25);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.builtByAgentsIcon i {
+    font-size: 24px;
+    color: #34C759;
+}
+
+.builtByAgentsContent {
+    flex: 1;
+}
+
+.builtByAgentsLabel {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #34C759;
+    margin-bottom: 4px;
+}
+
+.builtByAgentsText {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 4px 0;
+}
+
+.builtByAgentsText strong {
+    color: #fff;
+}
+
+.builtByAgentsSubtext {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
+    .powersGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fomoQuotes {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .blurCircleBlue {
+        width: 400px;
+        height: 400px;
+        right: -20%;
+    }
+
+    .blurCircleGold {
+        width: 350px;
+        height: 350px;
+        left: -20%;
+    }
+
+    .powerToCreateSection {
+        padding: 48px 32px;
+    }
+
+    .powerStats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .powerStatNumber {
+        font-size: 40px;
+    }
+
+    .builtByAgents {
+        padding: 20px 24px;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .title br {
+        display: none;
+    }
+
+    .quoteMinimal {
+        padding-left: 20px;
+        margin-bottom: 48px;
+    }
+
+    .quoteMinimal p {
+        font-size: 18px;
+    }
+
+    .comparisonSection {
+        margin-bottom: 48px;
+    }
+
+    .comparisonTitle {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .comparisonRow {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+        margin: 0 auto;
+    }
+
+    .beforeCard,
+    .afterCard {
+        padding: 20px;
+    }
+
+    .beforeCard:hover,
+    .afterCard:hover {
+        transform: none;
+    }
+
+    .powersSection {
+        margin-bottom: 48px;
+    }
+
+    .powersGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .fomoBar {
+        padding: 24px 20px;
+        margin-bottom: 48px;
+    }
+
+    .metaphorBlock {
+        padding: 40px 24px;
+    }
+
+    .metaphorTitle {
+        font-size: 24px;
+    }
+
+    .metaphorText {
+        font-size: 18px;
+    }
+
+    .metaphorFeatures {
+        align-items: stretch;
+    }
+
+    .metaphorFeature {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .blurCircleBlue,
+    .blurCircleGold {
+        display: none;
+    }
+
+    .powerToCreateSection {
+        padding: 40px 24px;
+        margin-top: 48px;
+    }
+
+    .powerToCreateHeader {
+        margin-bottom: 32px;
+    }
+
+    .powerStats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .powerStat {
+        padding: 20px 16px;
+    }
+
+    .powerStatNumber {
+        font-size: 36px;
+    }
+
+    .karpathyQuote {
+        padding: 20px 24px;
+        font-size: 16px;
+    }
+
+    .powerToCreateText {
+        font-size: 15px;
+    }
+
+    .builtByAgents {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        margin-top: 32px;
+    }
+
+    .builtByAgentsIcon {
+        margin-bottom: 8px;
+    }
+}
