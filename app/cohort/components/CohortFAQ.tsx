@@ -5,24 +5,24 @@ import styles from './CohortFAQ.module.css';
 
 const faqs = [
     {
-        question: "Qual a configuração mínima do computador?",
-        answer: "4-8GB de RAM é suficiente. O processamento pesado acontece nos servidores da Anthropic, não no seu computador. Você precisa de Claude Pro ou Max ativo."
+        question: "Será que EU vou conseguir?",
+        answer: "Depende. Isso aqui não é curso passivo pra assistir no 2x. Exige dedicação real: 8 semanas de aulas ao vivo, prática entre as aulas, e disposição pra errar até acertar. Se você quer só 'aprender sobre IA', não é pra você. Se quer FAZER acontecer e está disposto a colocar as horas, sim — você consegue. 91% dos alunos não sabiam programar."
     },
     {
-        question: "E se a IA apagar meus arquivos ou quebrar meu projeto?",
-        answer: "Na Aula 1 você configura sandboxes e backups automáticos. Na Aula 7 (Segurança), reforçamos proteção de dados em detalhes. Zero risco de destruição."
+        question: "E se eu me perder no meio do cohort?",
+        answer: "Squads por nível com mentoria técnica direta. Não é 'aluno ajudando aluno'. Equipe técnica acompanha de perto. Todas as aulas ficam gravadas. Mas atenção: gravação é backup, não plano A. O resultado vem de quem participa ao vivo."
+    },
+    {
+        question: "Preciso saber programar?",
+        answer: "Não precisa ser dev. Mas precisa entender vocabulário técnico básico: Git, API, Deploy. As aulas de reforço pré-cohort nivelam isso. Se você nunca abriu um terminal na vida, talvez precise se preparar antes."
     },
     {
         question: "Quanto vou gastar em tokens por mês?",
         answer: "A Aula 6 foca em otimização de custos. Alunos que aplicam as técnicas reduzem 40-60% do consumo. Média de R$50-100/mês para projetos ativos."
     },
     {
-        question: "Preciso saber programar?",
-        answer: "Não precisa ser dev. Mas precisa entender vocabulário técnico básico: Git, API, Deploy. As aulas de reforço pré-cohort nivelam isso."
-    },
-    {
-        question: "E se eu me perder no meio do cohort?",
-        answer: "Squads por nível com mentoria técnica direta. Não é 'aluno ajudando aluno'. Equipe técnica acompanha. Todas as aulas ficam gravadas."
+        question: "E se a IA apagar meus arquivos ou quebrar meu projeto?",
+        answer: "Na Aula 1 você configura sandboxes e backups automáticos. Na Aula 7 (Segurança), reforçamos proteção de dados em detalhes. Zero risco de destruição."
     },
     {
         question: "Posso entrar se ainda uso Lovable ou Cursor?",
@@ -35,6 +35,10 @@ const faqs = [
     {
         question: "E se eu não gostar?",
         answer: "Garantia de 100% do dinheiro de volta até a Aula 2. Sem perguntas, sem burocracia."
+    },
+    {
+        question: "Qual a configuração mínima do computador?",
+        answer: "4-8GB de RAM é suficiente. O processamento pesado acontece nos servidores da Anthropic, não no seu computador. Você precisa de Claude Pro ou Max ativo."
     },
     {
         question: "Qual modelo do Claude preciso usar?",

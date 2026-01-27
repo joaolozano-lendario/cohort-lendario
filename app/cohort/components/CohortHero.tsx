@@ -71,13 +71,13 @@ export default function CohortHero() {
                     </div>
 
                     <h1 className={styles.headline}>
-                        Instalei o <span className={styles.headlineHighlight}>AIOS</span>.
+                        <span className={styles.headlineLight}>Torne-se um</span>
                         <br />
-                        <span className={styles.headlineLight}>E agora?</span>
+                        <span className={styles.headlineHighlight}>Exército de Um Só</span>
                     </h1>
 
                     <p className={styles.subheadline}>
-                        83 pessoas fizeram essa pergunta. O Cohort é a resposta.
+                        O método para comandar agentes IA como um maestro.
                     </p>
 
                     <div className={styles.promiseBlock}>

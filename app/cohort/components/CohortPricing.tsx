@@ -145,11 +145,11 @@ export default function CohortPricing() {
 
                         <div className={styles.cardHeader}>
                             <h3 className={styles.planName}>Cohort<br />Lendário Master</h3>
+                            <div className={styles.priceSub}>12x de</div>
                             <div className={styles.price}>
                                 <span className={styles.currency}>R$</span>
-                                <span className={styles.amount}>5.000</span>
+                                <span className={styles.amount}>666</span>
                             </div>
-                            <div className={styles.priceSub}>ou 12x de R$ 499,58</div>
                         </div>
 
                         <div className={styles.cardBody}>
@@ -197,11 +197,11 @@ export default function CohortPricing() {
 
                         <div className={styles.cardHeader}>
                             <h3 className={styles.planName}>Cohort<br />Lendário Master</h3>
+                            <div className={styles.priceSub}>12x de</div>
                             <div className={styles.price}>
                                 <span className={styles.currency}>R$</span>
-                                <span className={styles.amount}>8.000</span>
+                                <span className={styles.amount}>1.000</span>
                             </div>
-                            <div className={styles.priceSub}>ou 12x de R$ 799,33</div>
                         </div>
 
                         <div className={styles.cardBody}>
