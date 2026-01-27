@@ -1,0 +1,394 @@
+.section {
+    padding: 100px 0;
+    background: #000;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.titleHighlight {
+    color: #FFD44A;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.calculatorGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Selection Panel */
+.selectionPanel {
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.panelTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 24px 0;
+}
+
+.agentList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.agentItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.agentItem:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.agentItem.selected {
+    background: rgba(10, 132, 255, 0.08);
+    border-color: rgba(10, 132, 255, 0.3);
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #0A84FF;
+    cursor: pointer;
+}
+
+.agentInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.agentName {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0A84FF;
+}
+
+.agentTitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.agentEconomy {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #FFD44A;
+}
+
+/* Profile Selector */
+.profileSelector {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 24px;
+}
+
+.profileTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 12px 0;
+}
+
+.profileOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profileOption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+}
+
+.profileOption.active {
+    background: rgba(255, 212, 74, 0.08);
+    border-color: rgba(255, 212, 74, 0.3);
+    color: #fff;
+}
+
+.profileOption input {
+    accent-color: #FFD44A;
+}
+
+/* Results Panel */
+.resultsPanel {
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.resultCard {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+}
+
+.resultCard.highlight {
+    background: rgba(10, 132, 255, 0.08);
+    border: 1px solid rgba(10, 132, 255, 0.2);
+}
+
+.resultCard.profit {
+    background: rgba(52, 199, 89, 0.08);
+    border: 1px solid rgba(52, 199, 89, 0.2);
+}
+
+.resultIcon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.resultIcon i {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.resultCard.highlight .resultIcon {
+    background: rgba(10, 132, 255, 0.15);
+}
+
+.resultCard.highlight .resultIcon i {
+    color: #0A84FF;
+}
+
+.resultCard.profit .resultIcon {
+    background: rgba(52, 199, 89, 0.15);
+}
+
+.resultCard.profit .resultIcon i {
+    color: #34C759;
+}
+
+.resultContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.resultLabel {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.resultValue {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.resultValueSmall {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.resultValueHighlight {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #0A84FF;
+}
+
+.resultValueProfit {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #34C759;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    margin: 8px 0;
+}
+
+.urgencyBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(255, 100, 100, 0.08);
+    border: 1px solid rgba(255, 100, 100, 0.2);
+    border-radius: 12px;
+    margin-top: 8px;
+}
+
+.urgencyBox i {
+    font-size: 18px;
+    color: #ff6b6b;
+}
+
+.urgencyBox span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.urgencyBox strong {
+    color: #ff6b6b;
+    font-weight: 700;
+}
+
+/* CTA */
+.ctaWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #FFD44A;
+    padding: 6px 6px 6px 28px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    margin-top: 16px;
+}
+
+.ctaWrapper:hover {
+    transform: translateY(-4px);
+    background: #ffcc00;
+    box-shadow: 0 12px 32px rgba(255, 212, 74, 0.25);
+}
+
+.ctaButton {
+    background: transparent;
+    color: #1a1a1a;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.arrowButton {
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaWrapper:hover .arrowButton {
+    transform: rotate(-45deg);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .calculatorGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .selectionPanel,
+    .resultsPanel {
+        padding: 24px;
+    }
+
+    .agentItem {
+        flex-wrap: wrap;
+    }
+
+    .agentEconomy {
+        width: 100%;
+        margin-left: 36px;
+        margin-top: 4px;
+    }
+
+    .resultValue {
+        font-size: 20px;
+    }
+
+    .resultValueHighlight,
+    .resultValueProfit {
+        font-size: 24px;
+    }
+}

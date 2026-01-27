@@ -1,0 +1,369 @@
+.section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 48px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.titleHighlight {
+    color: #ff6b6b;
+}
+
+/* Cost Box */
+.costBox {
+    background: rgba(255, 100, 100, 0.1);
+    border: 2px solid rgba(255, 100, 100, 0.3);
+    border-radius: 20px;
+    padding: 48px;
+    margin-bottom: 32px;
+}
+
+.costMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.costLabel {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.costValue {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(48px, 8vw, 72px);
+    font-weight: 800;
+    color: #ff6b6b;
+    letter-spacing: -0.02em;
+}
+
+.costDetail {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Delay Table */
+.delayTable {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.delayRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+}
+
+.delayPeriod {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.delayLoss {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff6b6b;
+}
+
+/* Comparison Box */
+.comparisonBox {
+    padding: 32px;
+    margin-bottom: 48px;
+}
+
+.comparisonText {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.comparisonText strong {
+    color: #FFD44A;
+    font-weight: 700;
+}
+
+/* Summary Box */
+.summaryBox {
+    background: rgba(52, 199, 89, 0.08);
+    border: 1px solid rgba(52, 199, 89, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.summaryTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 32px 0;
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.summaryItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.summaryLabel {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.summaryValue {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.summarySmall {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.summaryValueHighlight {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0A84FF;
+}
+
+.summaryValueProfit {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #34C759;
+}
+
+/* If Nothing */
+.ifNothing {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.ifNothingTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 20px 0;
+}
+
+.ifNothingList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ifNothingList li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ifNothingList li i {
+    color: #ff6b6b;
+    font-size: 14px;
+}
+
+/* Final CTA */
+.finalCTA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.ctaWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #FFD44A;
+    padding: 6px 6px 6px 32px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.ctaWrapper:hover {
+    transform: translateY(-4px);
+    background: #ffcc00;
+    box-shadow: 0 12px 40px rgba(255, 212, 74, 0.3);
+}
+
+.ctaButton {
+    background: transparent;
+    color: #504015;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.arrowButton {
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    color: #504015;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaWrapper:hover .arrowButton {
+    transform: rotate(-45deg);
+}
+
+.ctaMeta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ctaMeta i {
+    color: #FFD44A;
+}
+
+/* Sources */
+.sources {
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sourcesTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 12px 0;
+}
+
+.sourcesText {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 0 8px 0;
+}
+
+.sourcesNote {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .costBox {
+        padding: 32px 24px;
+    }
+
+    .costValue {
+        font-size: 40px;
+    }
+
+    .delayRow {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .summaryGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .summaryItem {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .summaryValue,
+    .summaryValueHighlight,
+    .summaryValueProfit {
+        font-size: 20px;
+    }
+
+    .ctaWrapper {
+        width: 100%;
+        padding: 6px 6px 6px 24px;
+    }
+
+    .ctaButton {
+        font-size: 15px;
+    }
+
+    .arrowButton {
+        width: 48px;
+        height: 48px;
+    }
+}

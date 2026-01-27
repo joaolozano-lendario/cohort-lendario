@@ -1,0 +1,245 @@
+.section {
+    padding: 100px 0;
+    background: #050505;
+    position: relative;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 5vw, 44px);
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.titleHighlight {
+    color: #FFD44A;
+}
+
+/* Table */
+.tableWrapper {
+    overflow-x: auto;
+    margin-bottom: 24px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #0d0d0d;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Header */
+.metricHeader {
+    width: 200px;
+    padding: 24px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.optionHeader {
+    padding: 24px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.optionHeader.highlighted {
+    background: rgba(255, 212, 74, 0.08);
+    border-left: 1px solid rgba(255, 212, 74, 0.2);
+    border-right: 1px solid rgba(255, 212, 74, 0.2);
+}
+
+.optionTitle {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.optionHeader.highlighted .optionTitle {
+    color: #FFD44A;
+}
+
+.optionSubtitle {
+    display: block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Category Rows */
+.categoryRow {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.categoryCell {
+    padding: 12px 24px;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Data Rows */
+.dataRow {
+    transition: background 0.2s ease;
+}
+
+.dataRow:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.metricCell {
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.valueCell {
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-left: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.highlightedCell {
+    background: rgba(255, 212, 74, 0.04);
+    color: #fff;
+    font-weight: 600;
+    border-left: 1px solid rgba(255, 212, 74, 0.15);
+    border-right: 1px solid rgba(255, 212, 74, 0.15);
+}
+
+/* Total Row */
+.totalRow {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.totalLabel {
+    padding: 20px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.totalValue {
+    padding: 20px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff6b6b;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.totalHighlighted {
+    background: rgba(52, 199, 89, 0.1);
+    color: #34C759;
+    border-left: 1px solid rgba(52, 199, 89, 0.2);
+    border-right: 1px solid rgba(52, 199, 89, 0.2);
+}
+
+/* Savings Row */
+.savingsRow {
+    background: rgba(52, 199, 89, 0.03);
+}
+
+.savingsLabel {
+    padding: 14px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.savingsEmpty {
+    padding: 14px 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-left: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.savingsValue {
+    padding: 14px 20px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: #34C759;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(52, 199, 89, 0.08);
+    border-left: 1px solid rgba(52, 199, 89, 0.2);
+    border-right: 1px solid rgba(52, 199, 89, 0.2);
+}
+
+/* Sources */
+.sources {
+    text-align: center;
+}
+
+.sources span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .tableWrapper {
+        margin: 0 -24px;
+        padding: 0 24px;
+    }
+
+    .table {
+        min-width: 600px;
+    }
+
+    .metricHeader,
+    .metricCell,
+    .totalLabel,
+    .savingsLabel {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

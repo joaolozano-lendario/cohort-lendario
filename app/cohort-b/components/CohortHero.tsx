@@ -50,12 +50,12 @@ export default function CohortHero() {
                     </div>
 
                     <h1 className={styles.headline}>
-                        <span className={styles.headlineHighlight}>R$ 109.164</span>
-                        <span className={styles.headlineLight}> Por Mês:</span>
+                        <span className={styles.headlineHighlight}>R$ 109.164 Por Mês:</span>
                         <br />
                         <span className={styles.headlineLight}>O Custo de </span>
                         <span className={styles.headlineHighlight}>NÃO</span>
-                        <span className={styles.headlineLight}> Ter Um Time de IA</span>
+                        <span className={styles.headlineLight}> Ter Um </span>
+                        <span className={styles.headlineHighlight}>Time de IA</span>
                     </h1>
 
                     <p className={styles.subheadline}>
