@@ -9,9 +9,9 @@ const menuData = {
         title: 'Programas',
         items: [
             { name: '2º Cérebro com IA', href: 'https://academialendaria.ai/2-cerebro-ia' },
-            { name: 'Comunidade Lendár[IA]', href: 'https://academialendaria.ai/comunidade' },
-            { name: 'Certificação Gestor de [IA]', href: 'https://academialendaria.ai/gestor' },
-            { name: 'Formação Lendár[IA]', href: 'https://academialendaria.ai/formacao' },
+            { name: 'Lendários Club', href: '/club' },
+            { name: 'Lendários Makers', href: '/makers' },
+            { name: 'Lendários Business', href: '/business' },
         ],
     },
     eventos: {

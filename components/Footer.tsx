@@ -53,9 +53,9 @@ export default function Footer() {
                         <div className={styles.column}>
                             <h4 className={styles.title}>Programas</h4>
                             <ul className={styles.list}>
-                                <li><a href="https://academialendaria.ai/comunidade">Comunidade Lendár[IA]™</a></li>
-                                <li><a href="https://academialendaria.ai/gestor">Certificação Gestor [IA]™</a></li>
-                                <li><a href="https://academialendaria.ai/formacao">Formação Lendár[IA]™</a></li>
+                                <li><a href="/club">Lendários Club</a></li>
+                                <li><a href="/makers">Lendários Makers</a></li>
+                                <li><a href="/business">Lendários Business</a></li>
                             </ul>
 
                             <h4 className={`${styles.title} ${styles.marginTop}`}>Eventos</h4>
