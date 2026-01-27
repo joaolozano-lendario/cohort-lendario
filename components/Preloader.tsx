@@ -13,42 +13,39 @@ export default function Preloader() {
 
     const [isMounted, setIsMounted] = useState(false);
     const [animateContent, setAnimateContent] = useState(false);
+    const [shouldShow, setShouldShow] = useState(false); // Threshold state
 
     useEffect(() => {
         setIsMounted(true);
 
-        // Trigger animations after mount
+        const handleLoad = () => {
+            setLoading(false);
+            document.body.classList.add('site-loaded');
+        };
+
+        // If site is already loaded, skip preloader
+        if (document.readyState === 'complete') {
+            handleLoad();
+            return;
+        }
+
+        // Trigger animations quickly if we are going to show the preloader
         const animationTimer = setTimeout(() => {
             setAnimateContent(true);
         }, 100);
 
-        // Final fallback to ensure preloader ALWAYS disappears
-        const fallbackTimeout = setTimeout(() => {
-            setLoading(false);
-            document.body.classList.add('site-loaded');
-        }, 5000);
+        // Fallback
+        const fallbackTimeout = setTimeout(handleLoad, 4000);
 
-        const handleLoad = () => {
+        window.addEventListener('load', handleLoad);
+        return () => {
+            window.removeEventListener('load', handleLoad);
             clearTimeout(fallbackTimeout);
-            setTimeout(() => {
-                setLoading(false);
-                document.body.classList.add('site-loaded');
-            }, 2000);
+            clearTimeout(animationTimer);
         };
-
-        if (document.readyState === 'complete') {
-            handleLoad();
-        } else {
-            window.addEventListener('load', handleLoad);
-            return () => {
-                window.removeEventListener('load', handleLoad);
-                clearTimeout(fallbackTimeout);
-                clearTimeout(animationTimer);
-            };
-        }
     }, []);
 
-    if (!isMounted || isDisabled) return null;
+    if (!isMounted || isDisabled || !loading) return null;
 
     return (
         <div className={`${styles.preloader} ${!loading ? styles.hidden : ''}`}>

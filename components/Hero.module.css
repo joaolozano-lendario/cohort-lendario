@@ -78,7 +78,7 @@
 
 :global(.site-loaded) .titleContainer {
     animation: heroRise 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: 0.1s;
+    animation-delay: 0s;
 }
 
 @keyframes heroRise {
@@ -136,7 +136,7 @@
 
 :global(.site-loaded) .buttonsContainer {
     animation: heroRise 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: 0.3s;
+    animation-delay: 0.15s;
 }
 
 /* Explore Button - Exact copy of joinButton style */
