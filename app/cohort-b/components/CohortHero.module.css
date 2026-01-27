@@ -19,26 +19,16 @@
     padding: 0 24px 64px 24px;
     display: flex;
     flex-direction: column;
-    background: url('/bg-vAiOS.png') center top / cover no-repeat, #000;
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255, 45, 85, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 20%, rgba(255, 212, 74, 0.08) 0%, transparent 40%),
+                radial-gradient(ellipse 50% 30% at 20% 80%, rgba(255, 45, 85, 0.06) 0%, transparent 40%),
+                #000;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
 }
 
-/* Dark overlay for text readability */
-.heroContainer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Subtle grid pattern over the image */
+/* Subtle grid pattern */
 .heroContainer::before {
     content: '';
     position: absolute;
@@ -479,7 +469,6 @@
 
     .heroContainer {
         padding: 0 16px 48px 16px;
-        background: url('/bg-vAiOS-mobile.png') center top / cover no-repeat, #000;
     }
 
     .headerBar {
