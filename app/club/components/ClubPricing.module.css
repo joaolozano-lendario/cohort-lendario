@@ -99,6 +99,12 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
+.subtitle {
+    font-size: 24px;
+    margin-top: 24px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .priceSub {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.4);
@@ -210,14 +216,6 @@
     font-size: 13px;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.4;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.bonusList li i {
-    color: #30D158;
-    font-size: 11px;
 }
 
 .tagContainer {

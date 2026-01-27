@@ -17,7 +17,7 @@ export default function BusinessCases() {
     const [currentIndex, setCurrentIndex] = useState(videoIds.length); // Start at the middle set
     const [isTransitioning, setIsTransitioning] = useState(true);
     const trackRef = useRef<HTMLDivElement>(null);
-    const [slideWidth, setSlideWidth] = useState(400 + 32); // Default desktop width + gap
+    const [slideWidth, setSlideWidth] = useState(400 + 64); // Default desktop width + gap
 
     // Calculate slide width based on screen size
     useEffect(() => {
@@ -27,11 +27,11 @@ export default function BusinessCases() {
                 if (width <= 1024) {
                     // Mobile & Tablet: 85% of viewport width + gap
                     const slideW = width * 0.85;
-                    const gap = 16;
+                    const gap = 32;
                     setSlideWidth(slideW + gap);
                 } else {
                     // Desktop: Fixed width for 1:1 look
-                    setSlideWidth(400 + 32);
+                    setSlideWidth(400 + 64);
                 }
             }
         };
@@ -99,8 +99,8 @@ export default function BusinessCases() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>
-                        Alguns CASES <br className={styles.titleBreak} />
-                        de Sucesso.
+                        Depoimentos de <br className={styles.titleBreak} />
+                        Quem Está Dentro
                     </h2>
                     <div className={styles.controls}>
                         <button className={styles.controlBtn} onClick={handlePrev} aria-label="Anterior">

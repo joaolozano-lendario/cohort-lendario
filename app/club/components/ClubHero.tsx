@@ -1,17 +1,17 @@
 'use client';
 
 import React from 'react';
-import styles from './BusinessHero.module.css';
+import styles from './ClubHero.module.css';
 
 const features = [
-    { icon: 'fi-rr-chart-line-up', title: <>Método<br />Growth IA®</>, description: 'Posicionamento, Oferta, Canais & Escala' },
-    { icon: 'fi-rr-users', title: <>Mentorias<br />Ao Vivo</>, description: '2 Vezes na semana sobre Negócios & Marketing' },
-    { icon: 'fi-rr-document', title: 'Frameworks de Marketing', description: 'Cursos e Ferramentas para receita mensurável' },
-    { icon: 'fi-rr-megaphone', title: 'Playbooks de Vendas', description: 'Scripts prontos e análise automatizada' },
-    { icon: 'fi-rr-settings', title: 'Ferramentas de IA Internas', description: 'Gestão tributária, financeira e operacional' }
+    { icon: 'fi-rr-brain-circuit', title: <>Sistema<br />Segundo Cérebro</>, description: 'Diagnóstico personalizado e trilha específica' },
+    { icon: 'fi-rr-users', title: <>Circle com<br />+15 Mil Lendários</>, description: 'Networking real com operadores e founders' },
+    { icon: 'fi-rr-videoconference', title: <>Mentorias<br />Ao Vivo</>, description: 'Semanais com quem está fazendo acontecer' },
+    { icon: 'fi-rr-marker', title: <>Hubs<br />Presenciais</>, description: '+50 pelo mundo para conexões reais' },
+    { icon: 'fi-rr-book-open-reader', title: <>Clube<br />do Livro</>, description: 'Leitura conjunta dos clássicos' }
 ];
 
-export default function BusinessHero() {
+export default function ClubHero() {
     const handleCTAClick = () => {
         const element = document.getElementById('precos');
         if (element) {
@@ -25,13 +25,11 @@ export default function BusinessHero() {
                 <div className={styles.headerBar}>
                     <div className={styles.headerLeft}>
                         <img
-                            src="/C-Business-Color-Dark.svg"
-                            alt="Academia Lendár[IA] Business"
+                            src="/C-Club-Color-Dark.svg"
+                            alt="Academia Lendár[IA] Club"
                             className={styles.headerLogo}
                         />
                     </div>
-
-
 
                     <div className={styles.headerRight}>
                         <button className={styles.headerCta} onClick={handleCTAClick}>
@@ -45,18 +43,17 @@ export default function BusinessHero() {
 
                         <div className={styles.titleContainer}>
                             <h1 className={styles.textBlock}>
-                                Você vê oportunidades que ninguém mais vê. Mas não consegue monetizá-las.
+                                Você Não Precisa de Mais Um Grupo. Você Precisa de Um Movimento.
                             </h1>
                         </div>
 
                         <div className={styles.description}>
-                            Programa completo para transformar visão técnica em receita recorrente,
-                            frameworks validados e mentorias ao vivo toda semana.
+                            Clareza absoluta, fundamentos que não mudam e uma tribo de loucos gênios que amam se desenvolver. Não é grupo de WhatsApp. É a vanguarda do futuro com IA.
                         </div>
 
                         <div className={styles.ctaWrapper} onClick={handleCTAClick}>
                             <button className={styles.ctaButton}>
-                                Quero Escalar Meu Negócio
+                                Fazer parte do movimento
                             </button>
                             <div className={styles.arrowButton}>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

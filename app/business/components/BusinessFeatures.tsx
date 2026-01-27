@@ -17,17 +17,17 @@ const features = [
     {
         icon: 'fi fi-rr-document',
         title: 'Frameworks de Marketing',
-        description: 'Cursos e Ferramentas para receita mensurável'
+        description: 'Scripts de Vendas, Copy e Funis'
     },
     {
-        icon: 'fi fi-rr-megaphone',
-        title: 'Playbooks de Vendas',
-        description: 'Scripts prontos e análise automatizada'
+        icon: 'fi fi-rr-comment-alt',
+        title: 'Suporte Individual',
+        description: 'Feedback direto em todos os seus materiais'
     },
     {
-        icon: 'fi fi-rr-settings',
-        title: 'Ferramentas de IA Internas',
-        description: 'Gestão tributária, financeira e operacional'
+        icon: 'fi fi-rr-rocket-lunch',
+        title: 'Sprint de Vendas',
+        description: 'Ações práticas para monetizar rápido'
     }
 ];
 

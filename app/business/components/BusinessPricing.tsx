@@ -28,19 +28,19 @@ export default function BusinessPricing() {
 
                         <ul className={styles.featureList}>
                             <li className={styles.featureItem}>
-                                <span className={styles.check}>✓</span> Método Growth IA®
+                                <span className={styles.check}><i className="fi fi-rr-check"></i></span> Método Growth IA®
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.check}>✓</span> Mentorias Business Ao Vivo (8x/semana, +60h/mês)
+                                <span className={styles.check}><i className="fi fi-rr-check"></i></span> Mentorias Business Ao Vivo (8x/semana, +60h/mês)
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.check}>✓</span> Frameworks de Marketing
+                                <span className={styles.check}><i className="fi fi-rr-check"></i></span> Frameworks de Marketing
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.check}>✓</span> Playbooks de Vendas
+                                <span className={styles.check}><i className="fi fi-rr-check"></i></span> Playbooks de Vendas
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.check}>✓</span> Ferramentas de IA Internas
+                                <span className={styles.check}><i className="fi fi-rr-check"></i></span> Ferramentas de IA Internas
                             </li>
                         </ul>
 
@@ -71,13 +71,13 @@ export default function BusinessPricing() {
 
                         <ul className={styles.featureList}>
                             <li className={styles.featureItem}>
-                                <span className={styles.check}>✓</span> Tudo do Plano Mensal
+                                <span className={styles.check}><i className="fi fi-rr-check"></i></span> Tudo do Plano Mensal
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.check}>✓</span> Masterclass com Gabriel Marcondes
+                                <span className={styles.check}><i className="fi fi-rr-check"></i></span> Masterclass com Gabriel Marcondes
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.check}>✓</span> Economia de R$ 8.880,00
+                                <span className={styles.check}><i className="fi fi-rr-check"></i></span> Economia de R$ 8.880,00
                             </li>
                         </ul>
 
@@ -95,14 +95,14 @@ export default function BusinessPricing() {
                                     </div>
                                 </div>
                                 <ul className={styles.bonusList}>
-                                    <li>✓ Sistema de Mapeamento Cognitivo Lendário</li>
-                                    <li>✓ Biblioteca de Soft Skills Essenciais (8 cursos)</li>
-                                    <li>✓ Acesso ao Circle com +15 mil Lendários</li>
-                                    <li>✓ Hubs Lendários (+50 hubs pelo mundo)</li>
-                                    <li>✓ Clube do Livro (curadoria + discussões diárias)</li>
-                                    <li>✓ Mulheres Lendárias (exclusivo feminino)</li>
-                                    <li>✓ Sistema Segundo Cérebro</li>
-                                    <li>✓ Sistema Brain - AI Second Brain</li>
+                                    <li><i className="fi fi-rr-check"></i> Sistema de Mapeamento Cognitivo Lendário</li>
+                                    <li><i className="fi fi-rr-check"></i> Biblioteca de Soft Skills Essenciais (8 cursos)</li>
+                                    <li><i className="fi fi-rr-check"></i> Acesso ao Circle com +15 mil Lendários</li>
+                                    <li><i className="fi fi-rr-check"></i> Hubs Lendários (+50 hubs pelo mundo)</li>
+                                    <li><i className="fi fi-rr-check"></i> Clube do Livro (curadoria + discussões diárias)</li>
+                                    <li><i className="fi fi-rr-check"></i> Mulheres Lendárias (exclusivo feminino)</li>
+                                    <li><i className="fi fi-rr-check"></i> Sistema Segundo Cérebro</li>
+                                    <li><i className="fi fi-rr-check"></i> Sistema Brain - AI Second Brain</li>
                                 </ul>
                             </div>
 
@@ -116,8 +116,8 @@ export default function BusinessPricing() {
                                     </div>
                                 </div>
                                 <ul className={styles.bonusList}>
-                                    <li>✓ Sistema Cloud Code Profundo * (framework zero &gt; app em 30 dias)</li>
-                                    <li>✓ Mentorias Técnicas ao Vivo (8x/semana, +60h/mês)</li>
+                                    <li><i className="fi fi-rr-check"></i> Sistema Cloud Code Profundo * (framework zero &gt; app em 30 dias)</li>
+                                    <li><i className="fi fi-rr-check"></i> Mentorias Técnicas ao Vivo (8x/semana, +60h/mês)</li>
                                     <div className={styles.tagContainer}>
                                         <span className={styles.tag}>Cloud Code profundo</span>
                                         <span className={styles.tag}>N8N e automações</span>
@@ -125,8 +125,8 @@ export default function BusinessPricing() {
                                         <span className={styles.tag}>Debugging e otimização</span>
                                         <span className={styles.tag}>Templates e Componentes</span>
                                     </div>
-                                    <li>✓ Biblioteca de Templates &amp; Automações</li>
-                                    <li>✓ Acesso aos Professores no WhatsApp</li>
+                                    <li><i className="fi fi-rr-check"></i> Biblioteca de Templates &amp; Automações</li>
+                                    <li><i className="fi fi-rr-check"></i> Acesso aos Professores no WhatsApp</li>
                                 </ul>
                             </div>
                         </div>
