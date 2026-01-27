@@ -1,0 +1,342 @@
+.section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #000 0%, #050510 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 4vw, 40px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.04em;
+}
+
+.titleHighlight {
+    color: #FFD44A;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 80px;
+}
+
+.faqItem {
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.faqItem.open {
+    border-color: rgba(10, 132, 255, 0.4);
+    background: rgba(10, 132, 255, 0.06);
+}
+
+.faqQuestion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.questionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.questionText {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.faqQuestion:hover .questionText {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.questionSource {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+}
+
+.faqIcon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.faqItem.open .faqIcon {
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faqItem.open .faqAnswer {
+    max-height: 300px;
+}
+
+.faqAnswer p {
+    padding: 0 24px 24px 24px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.finalCTA {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 64px 40px;
+}
+
+.finalTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 16px 0;
+}
+
+.finalText {
+    font-size: 18px;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.finalText strong {
+    color: #fff;
+}
+
+.finalSubtext {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 32px 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaWrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: #FFD44A;
+    padding: 4px 4px 4px 32px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.ctaWrapper:hover {
+    transform: translateY(-4px);
+    background: #ffcc00;
+    box-shadow: 0 10px 30px rgba(255, 212, 74, 0.2);
+}
+
+.ctaButton {
+    background: transparent;
+    color: #504015;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.arrowButton {
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    color: #504015;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaWrapper:hover .arrowButton {
+    transform: rotate(-45deg);
+}
+
+/* Closing Block */
+.closingBlock {
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 24px;
+    display: inline-block;
+}
+
+.closingIcon {
+    width: 48px;
+    height: 48px;
+    background: rgba(10, 132, 255, 0.15);
+    border: 1px solid rgba(10, 132, 255, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+}
+
+.closingIcon i {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.closingNote {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 8px 0;
+}
+
+.closingNote strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.closingCta {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .faqList {
+        margin-bottom: 48px;
+    }
+
+    .faqQuestion {
+        padding: 20px;
+    }
+
+    .questionText {
+        font-size: 15px;
+    }
+
+    .faqAnswer p {
+        padding: 0 20px 20px 20px;
+        font-size: 14px;
+    }
+
+    .finalCTA {
+        padding: 40px 24px;
+    }
+
+    .finalTitle {
+        font-size: 24px;
+    }
+
+    .finalSubtext {
+        font-size: 15px;
+    }
+
+    .ctaWrapper {
+        padding: 4px 4px 4px 24px;
+        gap: 8px;
+    }
+
+    .ctaButton {
+        font-size: 15px;
+    }
+
+    .arrowButton {
+        width: 48px;
+        height: 48px;
+    }
+}

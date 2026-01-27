@@ -1,0 +1,264 @@
+.section {
+    padding: 80px 0;
+    background: #000;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.03em;
+}
+
+.titleHighlight {
+    color: #FFD44A;
+}
+
+.criteriaGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.criteriaCard {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.criteriaCard:hover {
+    border-color: rgba(34, 197, 94, 0.5);
+}
+
+.criteriaCard.notFor {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.criteriaCard.notFor:hover {
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.criteriaTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 24px 0;
+}
+
+.checkIcon {
+    width: 32px;
+    height: 32px;
+    background: rgba(52, 199, 89, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(100, 200, 130, 0.9);
+    font-size: 14px;
+}
+
+.crossIcon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 69, 58, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 120, 120, 0.9);
+    font-size: 14px;
+}
+
+.criteriaList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.criteriaItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.bulletCheck {
+    width: 24px;
+    height: 24px;
+    background: rgba(52, 199, 89, 0.15);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(100, 200, 130, 0.9);
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.bulletCross {
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 69, 58, 0.15);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 120, 120, 0.9);
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.notForNote {
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 24px 0 0 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.differentialsSection {
+    text-align: center;
+}
+
+.differentialsTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 40px 0;
+}
+
+.differentialsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.differentialCard {
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 32px;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.differentialCard:hover {
+    border-color: rgba(10, 132, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(10, 132, 255, 0.1);
+}
+
+.diffIconWrapper {
+    width: 48px;
+    height: 48px;
+    background: rgba(10, 132, 255, 0.15);
+    border: 1px solid rgba(10, 132, 255, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.diffIconWrapper i {
+    font-size: 20px;
+    color: rgba(10, 132, 255, 0.8);
+}
+
+.diffTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 12px 0;
+}
+
+.diffDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .differentialsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .criteriaGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 48px;
+    }
+
+    .criteriaCard {
+        padding: 28px;
+    }
+
+    .criteriaTitle {
+        font-size: 18px;
+    }
+
+    .differentialsTitle {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    .differentialCard {
+        padding: 24px;
+    }
+}
