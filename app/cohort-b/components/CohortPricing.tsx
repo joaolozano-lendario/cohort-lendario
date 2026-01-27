@@ -209,7 +209,7 @@ export default function CohortPricing() {
                                 </div>
                             </a>
                             <a href="#" onClick={handleWhatsAppClick} className={styles.whatsappLink}>
-                                <i className="fi fi-brands-whatsapp"></i>
+                                <i className="fi fi-rr-phone-call"></i>
                                 <span>Dúvidas? Fale com a gente</span>
                             </a>
                         </div>
@@ -266,7 +266,7 @@ export default function CohortPricing() {
                                 </div>
                             </a>
                             <a href="#" onClick={handleWhatsAppClick} className={styles.whatsappLink}>
-                                <i className="fi fi-brands-whatsapp"></i>
+                                <i className="fi fi-rr-phone-call"></i>
                                 <span>Dúvidas? Fale com a gente</span>
                             </a>
                         </div>
