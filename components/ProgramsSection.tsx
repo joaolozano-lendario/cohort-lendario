@@ -13,24 +13,24 @@ const programs = [
     },
     {
         id: 'comunidade',
-        title: 'Comunidade Lendár[IA]™',
+        title: 'Lendários Club',
         image: '/programs/lendaria-negocios.png',
         description: 'Ecossistema exclusivo que conecta Profissionais e Empresários em IA através de networking estratégico, eventos presenciais, mentorias coletivas e acesso a oportunidades reais de negócios, acelerando crescimento profissional e empresarial de forma colaborativa.',
-        href: 'https://academialendaria.ai/comunidade'
+        href: '/club'
     },
     {
         id: 'certificacao-gestor',
-        title: 'Certificação Gestor [IA]™',
+        title: 'Lendários Makers',
         image: '/programs/lendaria-carreiras.png',
-        description: 'Programa prático que capacita profissionais a Dominar a Implementação e Gestão de IA Generativa Empresarial através de casos reais, eliminando a lacuna entre conhecimento técnico e aplicação estratégica no mercado de forma acelerada.',
-        href: 'https://academialendaria.ai/gestor'
+        description: 'Programa prático que capacita profissionais a construir sistemas completos de IA através de método estruturado Claude Code, mentorias técnicas semanais e suporte sênior direto, eliminando o travamento entre visão e execução para ter aplicações em produção em 30 dias.',
+        href: '/makers'
     },
     {
         id: 'formacao',
-        title: 'Formação Lendár[IA]™',
+        title: 'Lendários Business',
         image: '/programs/lendaria-jovens.png',
-        description: 'Sistema completo que capacita Empresários e Gestores a implementar IA Estratégica para Reduzir Despesas e Aumentar a Receita, combinando nosso Arsenal de Ferramentas proprietárias, automação de processos, treinamentos práticos e Monitoria Online e Ao Vivo 2 Vezes ao dia.',
-        href: 'https://academialendaria.ai/formacao'
+        description: 'Sistema completo que capacita Empresários e Gestores a implementar IA Estratégica para Reduzir Despesas e Aumentar a Receita, combinando nosso Arsenal de Ferramentas proprietárias, automação de processos, treinamentos práticos e Monitoria Online e Ao Vivo 2 Vezes por semana.',
+        href: '/business'
     }
 ];
 
