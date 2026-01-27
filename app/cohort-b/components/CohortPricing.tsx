@@ -167,7 +167,7 @@ export default function CohortPricing() {
                             <div className={styles.priceLabel}>12x de</div>
                             <div className={styles.price}>
                                 <span className={styles.currency}>R$</span>
-                                <span className={styles.amountHighlight}>666</span>
+                                <span className={styles.amountHighlight}>800</span>
                             </div>
                             <div className={styles.priceTotal}>ou R$ 8.000 à vista</div>
                         </div>
