@@ -69,8 +69,8 @@
 }
 
 .faqItem.open {
-    border-color: rgba(10, 132, 255, 0.4);
-    background: rgba(10, 132, 255, 0.06);
+    border-color: rgba(255, 45, 85, 0.4);
+    background: rgba(255, 45, 85, 0.06);
 }
 
 .faqQuestion {
@@ -247,8 +247,8 @@
 .closingIcon {
     width: 48px;
     height: 48px;
-    background: rgba(10, 132, 255, 0.15);
-    border: 1px solid rgba(10, 132, 255, 0.3);
+    background: rgba(255, 45, 85, 0.15);
+    border: 1px solid rgba(255, 45, 85, 0.3);
     border-radius: 12px;
     display: flex;
     align-items: center;

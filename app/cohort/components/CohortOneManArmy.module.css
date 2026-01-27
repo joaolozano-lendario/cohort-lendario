@@ -12,7 +12,7 @@
     right: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(10, 132, 255, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 45, 85, 0.2) 0%, transparent 70%);
     filter: blur(80px);
     pointer-events: none;
 }
@@ -223,7 +223,7 @@
 }
 
 .powerCard:hover {
-    border-color: rgba(10, 132, 255, 0.25);
+    border-color: rgba(255, 45, 85, 0.25);
     transform: translateY(-2px);
 }
 
@@ -240,7 +240,7 @@
 }
 
 .powerCard:hover .powerIcon {
-    background: rgba(10, 132, 255, 0.12);
+    background: rgba(255, 45, 85, 0.12);
 }
 
 .powerIcon i {
@@ -250,7 +250,7 @@
 }
 
 .powerCard:hover .powerIcon i {
-    color: rgba(10, 132, 255, 0.9);
+    color: rgba(255, 45, 85, 0.9);
 }
 
 .powerTitle {
@@ -391,10 +391,10 @@
 
 /* Power to Create Section */
 .powerToCreateSection {
-    background: linear-gradient(135deg, rgba(10, 132, 255, 0.08) 0%, rgba(10, 132, 255, 0.06) 100%);
+    background: linear-gradient(135deg, rgba(255, 45, 85, 0.08) 0%, rgba(255, 45, 85, 0.06) 100%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
     backdrop-filter: blur(24px) saturate(180%);
-    border: 1px solid rgba(10, 132, 255, 0.15);
+    border: 1px solid rgba(255, 45, 85, 0.15);
     border-radius: 24px;
     padding: 64px;
     margin-top: 64px;
@@ -407,15 +407,15 @@
 
 .powerBadge {
     display: inline-block;
-    background: linear-gradient(135deg, rgba(10, 132, 255, 0.2) 0%, rgba(10, 132, 255, 0.2) 100%);
-    border: 1px solid rgba(10, 132, 255, 0.3);
+    background: linear-gradient(135deg, rgba(255, 45, 85, 0.2) 0%, rgba(255, 45, 85, 0.2) 100%);
+    border: 1px solid rgba(255, 45, 85, 0.3);
     border-radius: 200px;
     padding: 8px 20px;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #0A84FF;
+    color: #FF2D55;
     margin-bottom: 20px;
 }
 
@@ -448,7 +448,7 @@
 }
 
 .powerStat:hover {
-    border-color: rgba(10, 132, 255, 0.3);
+    border-color: rgba(255, 45, 85, 0.3);
     transform: translateY(-4px);
 }
 
@@ -457,7 +457,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 48px;
     font-weight: 800;
-    background: linear-gradient(135deg, #0A84FF 0%, #0A84FF 100%);
+    background: linear-gradient(135deg, #FF2D55 0%, #FF2D55 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -474,7 +474,7 @@
     background: rgba(0, 0, 0, 0.3);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    border-left: 3px solid #0A84FF;
+    border-left: 3px solid #FF2D55;
     border-radius: 0 16px 16px 0;
     padding: 28px 32px;
     margin: 0 0 32px 0;
@@ -491,7 +491,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    color: #0A84FF;
+    color: #FF2D55;
 }
 
 .powerToCreateText {

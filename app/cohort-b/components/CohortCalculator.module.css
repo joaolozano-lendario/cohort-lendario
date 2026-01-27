@@ -93,14 +93,14 @@
 }
 
 .agentItem.selected {
-    background: rgba(10, 132, 255, 0.08);
-    border-color: rgba(10, 132, 255, 0.3);
+    background: rgba(255, 45, 85, 0.08);
+    border-color: rgba(255, 45, 85, 0.3);
 }
 
 .checkbox {
     width: 20px;
     height: 20px;
-    accent-color: #0A84FF;
+    accent-color: #FF2D55;
     cursor: pointer;
 }
 
@@ -115,7 +115,7 @@
     font-family: 'SF Mono', 'Fira Code', monospace;
     font-size: 13px;
     font-weight: 600;
-    color: #0A84FF;
+    color: #FF2D55;
 }
 
 .agentTitle {
@@ -194,8 +194,8 @@
 }
 
 .resultCard.highlight {
-    background: rgba(10, 132, 255, 0.08);
-    border: 1px solid rgba(10, 132, 255, 0.2);
+    background: rgba(255, 45, 85, 0.08);
+    border: 1px solid rgba(255, 45, 85, 0.2);
 }
 
 .resultCard.profit {
@@ -220,11 +220,11 @@
 }
 
 .resultCard.highlight .resultIcon {
-    background: rgba(10, 132, 255, 0.15);
+    background: rgba(255, 45, 85, 0.15);
 }
 
 .resultCard.highlight .resultIcon i {
-    color: #0A84FF;
+    color: #FF2D55;
 }
 
 .resultCard.profit .resultIcon {
@@ -265,7 +265,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 28px;
     font-weight: 800;
-    color: #0A84FF;
+    color: #FF2D55;
 }
 
 .resultValueProfit {

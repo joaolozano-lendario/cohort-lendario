@@ -42,6 +42,12 @@ export default function CohortHero() {
                 </div>
 
                 <div className={styles.content}>
+                    <img
+                        src="/L-AiOSCohort-Color-Dark.svg"
+                        alt="AiOS Cohort"
+                        className={styles.heroLogo}
+                    />
+
                     <div className={styles.badgeRow}>
                         <div className={styles.liveBadge}>
                             <span className={styles.pulseDot}></span>

@@ -19,16 +19,26 @@
     padding: 0 24px 64px 24px;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(10, 132, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 80% 20%, rgba(255, 212, 74, 0.08) 0%, transparent 40%),
-                radial-gradient(ellipse 50% 30% at 20% 80%, rgba(10, 132, 255, 0.06) 0%, transparent 40%),
-                #000;
+    background: url('/bg-vAiOS.png') center top / cover no-repeat, #000;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
 }
 
-/* Subtle grid pattern */
+/* Dark overlay for text readability */
+.heroContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.85) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Subtle grid pattern over the image */
 .heroContainer::before {
     content: '';
     position: absolute;
@@ -41,12 +51,19 @@
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 /* Background Image - NOT USED, IMAGE IS ON CONTAINER */
 .backgroundImage {
     display: none;
+}
+
+.heroLogo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 24px;
+    opacity: 0.9;
 }
 
 /* Blur Circles - REMOVED FOR CLEANER LOOK */
@@ -131,10 +148,10 @@
     gap: 10px;
     height: 44px;
     padding: 0 20px;
-    background: rgba(10, 132, 255, 0.15);
+    background: rgba(255, 45, 85, 0.15);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(10, 132, 255, 0.4);
+    border: 1px solid rgba(255, 45, 85, 0.4);
     border-radius: 200px;
     font-size: 14px;
     font-weight: 700;
@@ -262,8 +279,8 @@
 .featureIcon {
     width: 48px;
     height: 48px;
-    background: rgba(10, 132, 255, 0.15);
-    border: 1px solid rgba(10, 132, 255, 0.3);
+    background: rgba(255, 45, 85, 0.15);
+    border: 1px solid rgba(255, 45, 85, 0.3);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -272,14 +289,14 @@
 
 .featureIcon i {
     font-size: 20px;
-    color: #0A84FF;
+    color: #FF2D55;
 }
 
 .agentTag {
     font-family: 'SF Mono', 'Fira Code', monospace;
     font-size: 11px;
     font-weight: 600;
-    color: #0A84FF;
+    color: #FF2D55;
     letter-spacing: 0.02em;
 }
 
@@ -321,7 +338,7 @@
 }
 
 .metaItem i {
-    color: #0A84FF;
+    color: #FF2D55;
     font-size: 16px;
 }
 
@@ -462,6 +479,7 @@
 
     .heroContainer {
         padding: 0 16px 48px 16px;
+        background: url('/bg-vAiOS-mobile.png') center top / cover no-repeat, #000;
     }
 
     .headerBar {
@@ -479,6 +497,11 @@
 
     .content {
         padding: 0;
+    }
+
+    .heroLogo {
+        width: 160px;
+        margin-bottom: 16px;
     }
 
     .headline {
