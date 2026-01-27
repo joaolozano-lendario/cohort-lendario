@@ -3,6 +3,25 @@
 import React from 'react';
 import styles from './CohortPricing.module.css';
 
+const whatsappTeam = [
+    { name: 'Douglas', number: '5548996285385' },
+    { name: 'Luciana', number: '5548996172481' },
+    { name: 'Michel', number: '5551999702808' }
+];
+
+const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Round-robin distribution using localStorage
+    let counter = 0;
+    if (typeof window !== 'undefined') {
+        counter = parseInt(localStorage.getItem('whatsappCounter') || '0');
+        localStorage.setItem('whatsappCounter', ((counter + 1) % whatsappTeam.length).toString());
+    }
+    const selectedPerson = whatsappTeam[counter % whatsappTeam.length];
+    const message = encodeURIComponent('Oi, estou com dúvidas sobre o Cohort Lendário Master');
+    window.open(`https://wa.me/${selectedPerson.number}?text=${message}`, '_blank');
+};
+
 const mainDeliverables = [
     {
         title: "8 Aulas Ao Vivo com Alan Nicolas",
@@ -181,13 +200,17 @@ export default function CohortPricing() {
                         </div>
 
                         <div className={styles.cta}>
-                            <a href="https://pay.hotmart.com/cohort-aluno" target="_blank" rel="noopener noreferrer" className={styles.ctaWrapper}>
+                            <a href="https://checkout.pagtrust.com.br/ck5ae851a4?funnel=fn8ddc0298" target="_blank" rel="noopener noreferrer" className={styles.ctaWrapper}>
                                 <span className={styles.ctaButton}>Garantir minha vaga</span>
                                 <div className={styles.arrowButton}>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                                         <path d="M5 12h14M12 5l7 7-7 7" />
                                     </svg>
                                 </div>
+                            </a>
+                            <a href="#" onClick={handleWhatsAppClick} className={styles.whatsappLink}>
+                                <i className="fi fi-brands-whatsapp"></i>
+                                <span>Dúvidas? Fale com a gente</span>
                             </a>
                         </div>
                     </div>
@@ -234,13 +257,17 @@ export default function CohortPricing() {
                         </div>
 
                         <div className={styles.cta}>
-                            <a href="https://pay.hotmart.com/cohort-externo" target="_blank" rel="noopener noreferrer" className={styles.ctaWrapperSecondary}>
+                            <a href="https://checkout.pagtrust.com.br/ck8bc7b674?funnel=fn1458a7b9" target="_blank" rel="noopener noreferrer" className={styles.ctaWrapperSecondary}>
                                 <span className={styles.ctaButtonSecondary}>Garantir minha vaga</span>
                                 <div className={styles.arrowButtonSecondary}>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                                         <path d="M5 12h14M12 5l7 7-7 7" />
                                     </svg>
                                 </div>
+                            </a>
+                            <a href="#" onClick={handleWhatsAppClick} className={styles.whatsappLink}>
+                                <i className="fi fi-brands-whatsapp"></i>
+                                <span>Dúvidas? Fale com a gente</span>
                             </a>
                         </div>
                     </div>
