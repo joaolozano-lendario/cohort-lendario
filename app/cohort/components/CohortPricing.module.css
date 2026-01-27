@@ -365,17 +365,28 @@
     line-height: 1;
 }
 
-.pricingCard.highlight .amount {
+.amountHighlight {
+    font-family: 'Inter', sans-serif;
     font-size: 56px;
+    font-weight: 900;
+    color: #FFD44A;
+    line-height: 1;
 }
 
-.priceSub {
+.priceLabel {
     font-size: 14px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+.priceTotal {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 8px;
 }
 
 .cardBody {
@@ -611,8 +622,8 @@
         font-size: 40px;
     }
 
-    .pricingCard.highlight .amount {
-        font-size: 44px;
+    .amountHighlight {
+        font-size: 48px;
     }
 
     .ctaButton,
